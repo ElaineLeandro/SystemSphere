@@ -1,0 +1,11 @@
+{
+  "name": "SystemSphere",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ElaineLeandro/SystemSphere.git",
+  "author": "ThiagoSS1 <thiago_seta@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
