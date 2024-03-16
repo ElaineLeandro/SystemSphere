@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>SystemSphere</title>
 </head>
 
 <body>
-    <header class="bg-red-400 shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+    <header class="bg-gray-500 shadow">
+        <div class="title-container hidden">
+            <h2>
+                Aproveite agora **50% de desconto** em produtos selecionados!
+                Não perca essa chance única de economizar! 💰
+            </h2>
+        </div>
+
+        <div class=" w-full mx-auto py-6 px-4 sm:px-6 ">
             <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between">
                 <button id="hamburger" class="lg:hidden block">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -18,16 +26,36 @@
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-                <nav id="menu" class="hidden flex flex-col space-y-4 lg:items-start">
-                    <a href="#" class="text-gray-500 hover:text-gray-900">Link 1</a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900">Link 2</a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900">Link 3</a>
+                <nav id="menu" class="hidden flex flex-col space-y-4 ">
+                    <a href="#" class="text-white  hover:text-gray-900">Link 1</a>
+                    <a href="#" class="text-white  hover:text-gray-900">Link 2</a>
+                    <a href="#" class="text-white  hover:text-gray-900">Link 3</a>
                 </nav>
-                <div class="flex items-center relative w-full lg:w-1/2">
+                <div class="flex items-center relative w-full mt-4 containers">
+
+                    <div class="hidden header-container">
+                        <div class="hidden logo-container">
+                            Exclusive
+                        </div>
+
+                        <nav class="hidden nav-container">
+                            <a href="">Home</a>
+                            <a href="">About</a>
+                            <a href="">Contact</a>
+                            <a href="">Sign-Up</a>
+                        </nav>
+                    </div>
+
+
                     <input type="search" placeholder="Search..."
-                        class="border-2 border-gray-300 bg-white h-10 w-full px-5 pl-8 rounded-lg text-sm focus:outline-none">
+                        class="border-2 border-gray-300 bg-white h-10 w-full px-5 pl-8 rounded-lg text-sm focus:outline-none search">
+
+                    <div>
+                        <p>testando</p>
+                        <img src="" alt="">
+                    </div>
                     <button type="submit" class="absolute left-2 top-0 mt-2.5">
-                        <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="text-gray-600 h-4 w-4 fill-current svg-container" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
                             viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
                             xml:space="preserve" width="512px" height="512px">
@@ -39,36 +67,218 @@
             </div>
         </div>
     </header>
+    <div class="flex flex-col space-y-2 mx-4 lg:px-32 ">
+        <section>
+            <div>
+                <nav>
 
-    <section class="px-4 mt-4">
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <div class="p-2 border rounded w-48 h-48">Produto 1</div>
-            <div class="p-2 border rounded w-48 h-48">Produto 2</div>
-            <div class="p-2 border rounded w-48 h-48">Produto 3</div>
-            <div class="p-2 border rounded w-48 h-48">Produto 4</div>
-            <div class="p-2 border rounded w-48 h-48">Produto 5</div>
-            <div class="p-2 border rounded w-48 h-48">Produto 6</div>
-        </div>
+                </nav>
+                <div>
 
-        <div class="bg-blue-500 h-32 flex items-center justify-center text-white text-2xl px-4">
-            Este é o seu banner
+                </div>
+
+            </div>
+        </section>
+
+        <section class="flex px-4 mt-4 grid products">
+            <div class="hidden lg:flex space-x-4 flex-row items-center">
+                <div class="p-2 border rounded w-20 h-40 bg-red-500"></div>
+                <p class="text-red-500">Todays</p>
+            </div>
+            <div class="flex flex-col space-y-2 ml-4">
+                <div class="hidden lg:flex space-x-4 flex-row ">
+                    <div class="text-lg font-bold ml-0 w-1/3">Flash Sales</div>
+                    <div class="flex space-x-4 ml-24">
+                        <div class="flex flex-col items-center">
+                            <span>Dias</span>
+                            <span class="text-2xl">00</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span>Horas</span>
+                            <span class="text-2xl">00</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span>Minutos</span>
+                            <span class="text-2xl">00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 lg:flex space-x-0 lg:space-x-4 ">
+                <div class="p-2 border rounded min-h-[196px] lg:h-[350px] lg:w-64">Produto 1</div>
+                <div class="p-2 border rounded min-h-[196px] lg:h-[350px] lg:w-64">Produto 2</div>
+                <div class="p-2 border rounded min-h-[196px] lg:h-[350px] lg:w-64">Produto 3</div>
+                <div class="p-2 border rounded min-h-[196px] lg:h-[350px] lg:w-64">Produto 4</div>
+                <div class="p-2 border rounded min-h-[196px] lg:h-[350px] lg:w-64">Produto 5</div>
+                <div class="p-2 border rounded min-h-[196px] lg:h-[350px] lg:w-64">Produto 6</div>
+            </div>
+        </section>
+
+        <div class="mt-36">
+            <section class="mt-36 hidden lg:flex flex-col px-4 grid products">
+                <div class="hidden lg:flex space-x-4 flex-row items-center">
+                    <div class="p-2 border rounded w-20 h-40 bg-red-500 rounded-lg"></div>
+                    <div class="text-red-500 text-xl font-semibold font-['Poppins'] leading-tight">Categories</div>
+
+                </div>
+                <div class="hidden lg:flex space-x-4 flex-row mt-9">
+                    <div class="text-black text-4xl font-bold font-['Inter'] leading-[48px] tracking-wider">Browse
+                        By Category</div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 lg:flex space-x-0 lg:space-x-4 mt-14 ">
+                    <div class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64">Produto 1</div>
+                    <div class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64">Produto 2</div>
+                    <div class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64">Produto 3</div>
+                    <div class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64">Produto 4</div>
+                    <div class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64">Produto 5</div>
+                    <div class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64">Produto 6</div>
+                </div>
+            </section>
         </div>
-    </section>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Produtos</a></li>
-            <li><a href="#">Sobre nós</li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h2>Sobre SystemSphere</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in semper ipsum. Donec eget nisi et enim
-            dictum vehicula.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 SystemSphere. All rights reserved.</p>
+        <div class="pt-20">
+            <div class="hidden lg:block w-full h-0.5 bg-black opacity-30"></div>
+
+            <div class="hidden lg:flex justify-between bg-black w-full lg:h-[500px] p-11 pt-24">
+                <div class="lg:flex flex-col ">
+                    <h2 class="text-green-400 leading-tight text-xl font-semibold font-['Poppins']">Categories</h2>
+                    <p
+                        class="text-white w-[443px] text-5xl font-semibold font-['Inter'] leading-[60px] tracking-widest whitespace-nowrap pt-[120px]">
+                        Aprimore sua Experiência Musical </p>
+                    <div
+                        class="w-[171px] h-14 px-12 py-4 bg-green-500 rounded justify-center mt-6 items-center gap-2.5 inline-flex">
+                        <div class="text-neutral-50 text-base font-medium font-['Poppins'] leading-normal">Buy Now!
+                        </div>
+                    </div>
+                </div>
+
+                <img src="./assets/JBL1.png" class="w-[500px] h-[330px]" alt="">
+            </div>
+
+            <section class="px-4 grid grid-cols-2 gap-4">
+                <div class="p-2 border rounded w-48 h-48">Div 1</div>
+                <div class="p-2 border rounded w-48 h-48">Div 2</div>
+                <div class="p-2 border rounded w-48 h-48">Div 3</div>
+                <div class="p-2 border rounded w-48 h-48">Div 4</div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="bg-black text-white w-full h-[500px] justify-center items-center pt-20 px-35">
+
+
+        <div class="left-[135px] top-[80px]  justify-center items-start gap-20 lg:flex">
+            <div class="flex-col justify-start items-start gap-4 inline-flex">
+                <div class="flex-col justify-start items-start gap-6 flex">
+                    <div class="flex-col justify-start items-start gap-6 flex">
+                        <div class="w-28 h-6 relative">
+                            <div
+                                class="left-0 top-0  text-neutral-50 text-2xl font-bold font-['Inter'] leading-normal tracking-wide">
+                                Exclusive</div>
+                        </div>
+                        <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Subscribe
+                        </div>
+                    </div>
+                    <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Get 10%
+                        off your first order</div>
+                </div>
+                <div
+                    class="w-56 pl-4 py-3 rounded border border-neutral-50 justify-start items-center gap-8 inline-flex">
+                    <div class="opacity-40 text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
+                        Enter your email</div>
+                    <div class="w-6 h-6 relative"></div>
+                </div>
+            </div>
+            <div class="flex-col justify-start items-start gap-6 inline-flex">
+                <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Support</div>
+                <div class="flex-col justify-start items-start gap-4 flex">
+                    <div class="w-44 text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">111
+                        Bijoy sarani, Dhaka, DH 1515, Bangladesh.</div>
+                    <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
+                        exclusive@gmail.com</div>
+                    <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
+                        +88015-88888-9999</div>
+                </div>
+            </div>
+            <div class="flex-col justify-start items-start gap-6 inline-flex">
+                <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Account</div>
+                <div class="flex-col justify-start items-start gap-4 flex">
+                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">My
+                        Account</a>
+                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Login /
+                        Register</a>
+                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Cart</a>
+                    <a href="#"
+                        class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Wishlist</a>
+                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Shop</a>
+                </div>
+            </div>
+            <div class="flex-col justify-start items-start gap-6 inline-flex">
+                <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Quick Link</div>
+                <div class="flex-col justify-start items-start gap-4 flex">
+                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Privacy
+                        Policy</a>
+                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Terms Of
+                        Use</a>
+                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">FAQ</a>
+                    <a href="#"
+                        class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Contact</a>
+                </div>
+            </div>
+            <div class="flex-col justify-start items-start gap-6 inline-flex">
+                <div class="flex-col justify-start items-start gap-6 flex">
+                    <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Download App
+                    </div>
+                    <div class="flex-col justify-start items-start gap-2 flex">
+                        <div class="opacity-70 text-neutral-50 text-xs font-medium font-['Poppins'] leading-none">
+                            Save $3 with App New User Only</div>
+                        <div class="justify-start items-center gap-2 inline-flex">
+                            <div class="w-20 h-20 relative bg-black">
+                                <img class="w-20 h-20 left-[2px] top-[2px] absolute border-2 border-white"
+                                    src="./assets/Qrcode 1.png" />
+                            </div>
+                            <div class="flex-col justify-start items-start gap-1 inline-flex">
+                                <div class="w-28 h-10 relative bg-black">
+                                    <img class="w-24 h-7 left-[3px] top-[5px] absolute rounded border border-neutral-50"
+                                        src="./assets/GooglePlay.png" />
+                                </div>
+                                <div class="w-28 h-10 relative bg-black">
+                                    <img class="w-24 h-8 left-[3px] top-[3px] absolute rounded border border-white"
+                                        src="./assets/appstore.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="justify-start items-start gap-6 inline-flex">
+                    <div class="w-6 h-6 relative"></div>
+                    <div class="w-6 h-6 relative">
+                        <div class="w-7 h-6 left-[-5px] top-0 absolute">
+                        </div>
+                    </div>
+                    <div class="w-6 h-6 relative">
+                        <div class="w-4 h-4 left-[3px] top-[3px] absolute">
+                        </div>
+                    </div>
+                    <div class="w-6 h-6 relative"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="left-0 top-[376px] a opacity-40 flex-col justify-center items-center gap-4 lg:flex pt-5">
+            <div class="w-96 h-px relative opacity-50">
+                <div class="w-96 h-px left-0 top-0  opacity-40 border border-white"></div>
+            </div>
+            <div class="opacity-60 justify-start items-center gap-3 inline-flex">
+                <div class="justify-start items-center gap-1.5 flex">
+                    <div class="w-5 h-5 relative">
+                        <div class="w-4 h-4 left-[1.67px] top-[1.67px] absolute">
+                        </div>
+                    </div>
+                    <div class="text-white text-base font-normal font-['Poppins'] leading-normal">Copyright
+                        Rimel 2022. All right reserved</div>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="./js/index.js"></script>
 </body>

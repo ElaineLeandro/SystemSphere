@@ -8,3 +8,82 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.products .banner {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.products .title {
+  margin-top: 4rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+footer .footer {
+  height: 400px;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-color: white !important;
+  }
+
+  header h2 {
+    color: white;
+  }
+
+  header .title-container {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+  header .nav-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    width: 390px;
+    height: 30px;
+  }
+
+  .nav-container {
+    margin-right: 300px;
+  }
+
+  header .logo-container {
+    display: block;
+  }
+
+  .header-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .svg-container {
+    display: none;
+  }
+
+  .containers {
+    padding: 0 135px;
+  }
+
+  .search {
+    display: flex;
+    width: 600px;
+  }
+
+  .container-products-title {
+    display: block;
+    gap: 40px;
+  }
+
+}
