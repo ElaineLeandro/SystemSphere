@@ -86,4 +86,8 @@ footer .footer {
     gap: 40px;
   }
 
+  .swiper {
+    width: 90%;
+    height: 400px;
+  }
 }

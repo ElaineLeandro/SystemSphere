@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>SystemSphere</title>
@@ -68,15 +70,78 @@
         </div>
     </header>
     <div class="flex flex-col space-y-2 mx-4 lg:px-32 ">
-        <section>
-            <div>
+        <section class="flex gap-13">
+            <aside class="bg-white w-1/4 text-black mt-13">
                 <nav>
-
+                    <ul class="space-y-2">
+                        <li class="opcion-con-desplegable">
+                            <div class="flex items-center justify-between p-2 hover:bg-gray-700">
+                                <div class="flex items-center">
+                                    <i class="fas fa-calendar-alt mr-2"></i>
+                                    <span>Agenda</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-xs mr-2"></i>
+                            </div>
+                            <ul class="desplegable ml-4 hidden">
+                                <li>
+                                    <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                                        <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                                        Gestion de citas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                                        <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                                        Polizas
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="opcion-con-desplegable">
+                            <div class="flex items-center justify-between p-2 hover:bg-gray-700">
+                                <div class="flex items-center">
+                                    <i class="fas fa-money-bill-wave mr-2"></i>
+                                    <span>Teste</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-xs mr-2"></i>
+                            </div>
+                            <ul class="desplegable ml-4 hidden">
+                                <li>
+                                    <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                                        <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                                        Teste
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                                        <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                                        Teste
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                                        <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                                        Teste
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </nav>
-                <div>
+            </aside>
+
+            <div class=" bg-black swiper mySwiper relative w-full md:mt-13" init="false">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/hero.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./assets/hero.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./assets/hero.png" alt=""></div>
 
                 </div>
 
+                <div class="swiper-button-next absolute top-1/2 right-0 transform -translate-y-1/2"></div>
+                <div class="swiper-button-prev absolute top-1/2 left-0 transform -translate-y-1/2"></div>
+
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -163,11 +228,9 @@
         </div>
     </div>
 
-    <footer class="bg-black text-white w-full h-[500px] justify-center items-center pt-20 px-35">
-
-
-        <div class="left-[135px] top-[80px]  justify-center items-start gap-20 lg:flex">
-            <div class="flex-col justify-start items-start gap-4 inline-flex">
+    <footer class="bg-black text-white w-full h-[500px] justify-center items-center pt-6 md:pt-[100px] px-35">
+        <div class="left-[135px] top-[90px]  justify-center items-start md:gap-36 lg:flex">
+            <div class="hidden md:block flex-col justify-start items-start gap-4 inline-flex">
                 <div class="flex-col justify-start items-start gap-6 flex">
                     <div class="flex-col justify-start items-start gap-6 flex">
                         <div class="w-28 h-6 relative">
@@ -182,37 +245,43 @@
                         off your first order</div>
                 </div>
                 <div
-                    class="w-56 pl-4 py-3 rounded border border-neutral-50 justify-start items-center gap-8 inline-flex">
+                    class="hidden md:block w-56 pl-4 py-3 rounded border border-neutral-50 justify-start items-center gap-8 inline-flex">
                     <div class="opacity-40 text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
                         Enter your email</div>
                     <div class="w-6 h-6 relative"></div>
                 </div>
             </div>
-            <div class="flex-col justify-start items-start gap-6 inline-flex">
-                <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Support</div>
-                <div class="flex-col justify-start items-start gap-4 flex">
-                    <div class="w-44 text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">111
-                        Bijoy sarani, Dhaka, DH 1515, Bangladesh.</div>
-                    <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
-                        exclusive@gmail.com</div>
-                    <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
-                        +88015-88888-9999</div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center md:gap-36 gap-6">
+                <div class="flex-col justify-center items-center gap-6 inline-flex text-center">
+                    <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">SUPORTE</div>
+                    <div class="flex-col justify-center items-center gap-4 flex">
+                        <div class="w-44 text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">111
+                            Bijoy sarani, Dhaka, DH 1515, Bangladesh.</div>
+                        <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
+                            exclusive@gmail.com</div>
+                        <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
+                            +88015-88888-9999</div>
+                    </div>
+                </div>
+                <div class="flex-col justify-center items-center gap-6 inline-flex text-center">
+                    <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">ACCOUNT</div>
+                    <div class="flex-col justify-center items-center gap-4 flex">
+                        <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">My
+                            Account</a>
+                        <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Login
+                            /
+                            Register</a>
+                        <a href="#"
+                            class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Cart</a>
+                        <a href="#"
+                            class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Wishlist</a>
+                        <a href="#"
+                            class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Shop</a>
+                    </div>
                 </div>
             </div>
-            <div class="flex-col justify-start items-start gap-6 inline-flex">
-                <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Account</div>
-                <div class="flex-col justify-start items-start gap-4 flex">
-                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">My
-                        Account</a>
-                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Login /
-                        Register</a>
-                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Cart</a>
-                    <a href="#"
-                        class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Wishlist</a>
-                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Shop</a>
-                </div>
-            </div>
-            <div class="flex-col justify-start items-start gap-6 inline-flex">
+            <div class="hidden md:block flex-col justify-start items-start gap-6 inline-flex">
                 <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Quick Link</div>
                 <div class="flex-col justify-start items-start gap-4 flex">
                     <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Privacy
@@ -224,7 +293,7 @@
                         class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Contact</a>
                 </div>
             </div>
-            <div class="flex-col justify-start items-start gap-6 inline-flex">
+            <div class="hidden md:block flex-col justify-start items-start gap-6 inline-flex">
                 <div class="flex-col justify-start items-start gap-6 flex">
                     <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Download App
                     </div>
@@ -249,22 +318,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="justify-start items-start gap-6 inline-flex">
-                    <div class="w-6 h-6 relative"></div>
-                    <div class="w-6 h-6 relative">
-                        <div class="w-7 h-6 left-[-5px] top-0 absolute">
-                        </div>
-                    </div>
-                    <div class="w-6 h-6 relative">
-                        <div class="w-4 h-4 left-[3px] top-[3px] absolute">
-                        </div>
-                    </div>
-                    <div class="w-6 h-6 relative"></div>
-                </div>
             </div>
 
         </div>
-        <div class="left-0 top-[376px] a opacity-40 flex-col justify-center items-center gap-4 lg:flex pt-5">
+        <div
+            class="hidden md:block left-0 top-[376px] a opacity-40 flex-col justify-center items-center gap-4 lg:flex pt-5">
             <div class="w-96 h-px relative opacity-50">
                 <div class="w-96 h-px left-0 top-0  opacity-40 border border-white"></div>
             </div>
@@ -280,7 +338,9 @@
             </div>
         </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
