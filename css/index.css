@@ -66,6 +66,7 @@ footer .footer {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    gap: 150px;
   }
 
   .svg-container {
