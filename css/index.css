@@ -29,19 +29,40 @@ footer .footer {
   height: 400px;
 }
 
-/*PÁGINA WISHLIST*/
-/* .flex {
-  justify-content: space-between;
-  margin: 1%;
-} */
-
-.flex-wish {
-  font-size: 25px;
-  margin-left: 5%;
-  margin-top: 3%;
+/*menu style*/
+.title-container {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  
 }
 
-.buttom {
+.title-container h2 {
+  position: absolute;
+  left: -100%;
+  animation: slideRight 11s linear infinite;
+
+}
+
+@keyframes slideRight {
+  0% {
+      left: -100%;
+  }
+  100% {
+      left: 100%;
+  }
+} 
+
+/*PÁGINA WISHLIST*/
+
+.flex-wishlist {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+}
+
+
+.btn-button {
   padding: 10px 10px;
   background-color: white;
   border: 2px solid;
@@ -57,7 +78,7 @@ footer .footer {
 
 }
 
-.buttom:hover {
+.btn-button:hover {
   background-color: lightblue;
 }
 
@@ -114,6 +135,123 @@ footer .footer {
   margin-left: 5%;
 
 }
+
+/*Página cart*/
+.container {
+  width: 1170px;
+  height: 840px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  width: 1170px;
+  height: 72px;
+  padding: 24px 39px;
+  background: white;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-item {
+  color: black;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.content {
+  /* Estilo do conteúdo do item */
+}
+
+.buttons {
+  display: flex;
+  gap: 757px;
+}
+
+.button {
+  padding: 16px 48px;
+  border-radius: 4px;
+  border: 1px rgba(0, 0, 0, 0.50) solid;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  gap: 173px;
+}
+
+.coupon {
+  display: flex;
+  gap: 16px;
+}
+
+.coupon-text {
+  opacity: 0.50;
+  color: black;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.coupon-button {
+  padding: 16px 48px;
+  background: #DB4444;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #FAFAFA;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.cart-total {
+  /* Estilo do total do carrinho */
+}
+
+.checkout-button {
+  padding: 16px 48px;
+  background: #DB4444;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #FAFAFA;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+
+
+
+
+/*Final página cart*/
 
 
 /*---------PÁGINA HOME----------*/
