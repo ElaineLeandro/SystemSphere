@@ -393,6 +393,10 @@ footer .footer {
     gap: 150px;
   }
 
+  .products {
+    margin-top: 75px;
+  }
+
   .svg-container {
     display: flex;
     position: relative;
