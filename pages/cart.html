@@ -7,10 +7,13 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="/output.css">
     <link rel="stylesheet" href="/css/index.css">
 
-    <title>Card List</title>
+    <title>Cart List</title>
 </head>
 
 <body>
@@ -84,36 +87,49 @@
     <main>
         <div class="container">
             <div class="item">
-              <div class="header">
-                <div class="header-item">Product</div>
-                <div class="header-item">Price</div>
-                <div class="header-item">Quantity</div>
-                <div class="header-item">Subtotal</div>
-              </div>
-              <div class="content">
-                <!-- Conteúdo do item -->
-              </div>
-              <div class="buttons">
-                <div class="button">Return To Shop</div>
-                <div class="button">Update Cart</div>
-              </div>
-            </div>
-            <div class="sidebar">
-              <div class="coupon">
-                <div class="coupon-text">Coupon Code</div>
-                <div class="coupon-button">Apply Coupon</div>
-              </div>
-              <div class="cart-total">
-                <!-- Total do carrinho -->
-              </div>
-              <div class="checkout-button">Proceed to Checkout</div>
-            </div>
-          </div>
-          
+                <div class="header-cart">
+                    <div class="header-item">Produto</div>
+                    <div class="header-item">Preço</div>
+                    <div class="header-item">Quantidade</div>
+                    <div class="header-item">Subtotal</div>
+                </div>
 
+                <div id="carrinho-vazio" style="display: none;">
+                    <div class="EmptyBasket-box">
+                        <i class="fas fa-shopping-cart fa-3x custom-icon-color"></i>
+                        <div class="EmptyBasket-title">Seu carrinho está vazio</div>
+                        <div class="EmptyBasket-text">
+                            Vá para a <a href="/index.html">página inicial</a> ou procure no site os produtos que vão te
+                            deixar feliz.<br>
+                            Quando encontrá-los, clique no botão adicionar ao seu carrinho ;)
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="button">Return To Shop</div>
+                        <div class="button">Update Cart</div>
+                    </div>
+                </div>
+
+
+                <div class="checkout-container">
+                    <div class="coupon-section">
+                        <input type="text" id="discountCode" class="discount-input" placeholder="Enter discount code">
+                        <button type="submit" onclick="applyCoupon()" class="apply-coupon-button">Apply Coupon</button>
+                    </div>
+                    <div class="cart-container">
+                        <div class="cart-header">Cart Total:</div>
+                        <div class="subtotal">Subtotal:</div>
+                        <div class="shipping">Shipping:</div>
+                        <div class="total">Total:</div>
+                        <div class="checkout-button"><button type="submit">Proceed to Checkout</button></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
     </main>
-
-
     <footer class="bg-black text-white w-full h-[500px] justify-center items-center pt-6 md:pt-[100px] px-35">
         <div class="left-[135px] top-[90px]  justify-center items-start md:gap-36 lg:flex">
             <div class="hidden md:block flex-col justify-start items-start gap-4 ">
@@ -224,6 +240,15 @@
             </div>
         </div>
     </footer>
+
+
+    <!--códigos js página cart-->
+    <script src="/js/cart.js"></script>
+    <script src="/js/wishilist.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/checkout.js"></script>
+    <script src="/js/swiper.js"></script>
+
 </body>
 
 </html>
