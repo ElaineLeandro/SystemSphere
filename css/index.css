@@ -436,6 +436,126 @@ header {
 }
 /*final menu teste*/
 
+/*FOOTER TESTE*/
+.containerFooter {
+  display: flex;
+  gap: 7%;
+  background-color: black;
+  width: auto;
+  height: 440px;
+  font-family: 'Robot', sans-serif;
+  padding: 5%;
+}
+
+.containerFooter--md {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  padding-bottom: 1%;
+  font-size: 16px;
+  font-family: 'Robot', sans-serif;
+  color: rgba(255, 255, 255, 1)  ;
+}
+
+hr {
+  border-color: #333;
+}
+
+.containerFooter li {
+padding: 2%;
+}
+
+.logoFooter {
+  position: relative;
+  width: 118px;
+  height: 40px;
+  margin-left: -2%;
+}
+
+.firstList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+  width: auto;
+}
+
+.firstList li input {
+  border: 1px solid white;
+  background-color: black;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.input-icon {
+  position: relative;
+}
+.input-icon i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px; 
+  cursor: pointer; 
+}
+
+.input-icon input {
+  padding-right: 40px;
+}
+
+.secondList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+}
+
+.threeList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+}
+
+.fourList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+  width: auto;
+}
+
+.fiveList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+  width: auto;
+}
+
+.fiveList img {
+  width: 100px;
+}
+
+.fiveList-item--md img {
+  display: flex;
+  transform: translateX(110%) translateY(-280%); 
+  
+}
+
+.fiveList > .logos-redes-sociales {
+  display: flex;
+  height: 40px;
+  width: 200px;
+  align-items: end;
+  justify-content: center;
+  transform: translateY(500%) translateX(-90%);
+  gap: 15%;
+}
+
+.logos-redes-sociales img {
+  width: 40px;
+  height: 35px;
+}
+/*FOOTER TESTE*/
+
 
 /*---------PÁGINA HOME----------*/
 @media screen and (min-width: 1024px) {

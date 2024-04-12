@@ -4,228 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!--CSS-->
     <link rel="stylesheet" href="../output.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/checkout.css">
-    <title>SystemSphere</title>
+
+    <!---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--ICONES FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <title>Checkout</title>
 </head>
 
 <body>
-    <header class="bg-black shadow fixed top-0 md:relative z-50 mb-20  md:mb-0  w-full md:w-auto">
-        <div class="title-container hidden">
-            <h2>
-                Aproveite agora **50% de desconto** em produtos selecionados!
-                Não perca essa chance única de economizar! 💰
-            </h2>
+    <header>
+        <div class="black-bar">
+            <a href="">
+                <h2>
+                    Aproveite agora **50% de desconto** em produtos selecionados!
+                    Não perca essa chance única de economizar! 💰
+                </h2>
+            </a>
         </div>
-
-        <div class=" w-full mx-auto py-6 px-4 sm:px-6 ">
-            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between">
-                <div class="">
-                    <button id="hamburger" class="lg:hidden  block bg-fuchsia-50">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                    <nav id="menu"
-                        class="hidden flex flex-row w-[420px] h-[50px] justify-center items-center mt-2 px-4 ">
-                        <a href="#"
-                            class=" text-black text-center bg-white hover:text-gray-900 w-full h-[50px] border border-black rounded-md">Sua
-                            Conta
-                        </a>
-                        <a href="#"
-                            class=" text-black text-center bg-white  hover:text-gray-900 w-full h-[50px] border border-black rounded-md">Seus
-                            Pedidos</a>
-                        <a href="#"
-                            class=" text-black text-center bg-white hover:text-gray-900 w-full h-[50px] border border-black rounded-md">Lista
-                            De Desejos</a>
-                    </nav>
-                </div>
-
-                <div class="flex items-center relative w-full mt-4 containers">
-
-                    <div class="hidden header-container">
-                        <div class="hidden logo-container">
-                            Exclusive
-                        </div>
-
-                        <nav class="hidden nav-container">
-                            <a href="../index.html">Home</a>
-                            <a href="">About</a>
-                            <a href="">Contact</a>
-                            <a href="">Sign-Up</a>
-                        </nav>
-                    </div>
-
-                    <input type="search" placeholder="Search..."
-                        class="border-2 border-gray-300 bg-white h-10 w-full px-5 pl-8 rounded-lg text-sm focus:outline-none search">
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <button type="submit" class="absolute left-2 top-0 mt-2.5">
-                        <svg class="text-gray-600 h-4 w-4 fill-current svg-container" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-                            viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
-                            xml:space="preserve" width="512px" height="512px">
-                            <path
-                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837  C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
-                        </svg>
-                    </button>
-                </div>
+        <div class="logo">
+            <a href="/index.html"><img src="/assets/logo.png" alt="Logo da Empresa"></a>
+        </div>
+        <nav class="nav-menu">
+            <ul class="list-menu">
+                <li class="items-menu"><a href="#">Home</a></li>
+                <li class="items-menu"><a href="#">Contato</a></li>
+                <li class="items-menu"><a href="#">Sobre</a></li>
+                <li class="items-menu"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div class="search-favorites-cart-profile">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="favorites-icon">
+                <img src="/assets/icons8-gostar-64.png" alt="">
+            </div>
+            <div class="cart-icon">
+                <img src="/assets/icons8-carrinho-de-compras-50.png" alt="">
+                <span class="cart-counter">3</span> <!-- Número de itens no carrinho -->
+            </div>
+            <div class="user-profile">
+                <i class="fa-regular fa-user"></i>
             </div>
         </div>
     </header>
 
-<div class="container">
+    <div class="container">
 
-    <form id="formulario">
-    <h2 class="titulo-form">Detalhes do Faturamento</h2>
+        <form id="formulario">
+            <h2 class="titulo-form">Detalhes do Faturamento</h2>
 
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
 
-        <label for="nome_empresa">Nome da Empresa:</label>
-        <input type="text" id="nome_empresa" name="nome_empresa"><br><br>
+            <label for="nome_empresa">Nome da Empresa:</label>
+            <input type="text" id="nome_empresa" name="nome_empresa"><br><br>
 
-        <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco"><br><br>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco"><br><br>
 
-        <label for="complemento">Complemento:</label>
-        <input type="text" id="complemento" name="complemento"><br><br>
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento"><br><br>
 
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade"><br><br>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade"><br><br>
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}-?[0-9]{4,5}-?[0-9]{4}"><br><br>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}-?[0-9]{4,5}-?[0-9]{4}"><br><br>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email"><br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
 
-        <input type="checkbox" id="salvar_info" name="salvar_info">
-        <label for="salvar_info">Salve essas informações para um check-out mais rápido na próxima vez</label><br><br>
+            <input type="checkbox" id="salvar_info" name="salvar_info">
+            <label for="salvar_info">Salve essas informações para um check-out mais rápido na próxima
+                vez</label><br><br>
 
-    </form>
+        </form>
 
-    <div class="compra">
-        <h2></h2>
-    </div>
-    
-</div>
-
-    <footer class="bg-black text-white w-full h-[500px] justify-center items-center pt-6 md:pt-[100px] px-35">
-        <div class="left-[135px] top-[90px]  justify-center items-start md:gap-36 lg:flex">
-            <div class="hidden md:block flex-col justify-start items-start gap-4 ">
-                <div class="flex-col justify-start items-start gap-6 flex">
-                    <div class="flex-col justify-start items-start gap-6 flex">
-                        <div class="w-28 h-6 relative">
-                            <div
-                                class="left-0 top-0  text-neutral-50 text-2xl font-bold font-['Inter'] leading-normal tracking-wide">
-                                Exclusive</div>
-                        </div>
-                        <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Subscribe
-                        </div>
-                    </div>
-                    <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Get 10%
-                        off your first order</div>
-                </div>
-                <div
-                    class="hidden md:block w-56 pl-4 py-3 rounded border border-neutral-50 justify-start items-center gap-8">
-                    <div class="opacity-40 text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
-                        Enter your email</div>
-                    <div class="w-6 h-6 relative"></div>
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-center items-center md:gap-36 gap-6">
-                <div class="flex-col justify-center items-center gap-6 inline-flex text-center">
-                    <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">SUPORTE</div>
-                    <div class="flex-col justify-center items-center gap-4 flex">
-                        <div class="w-44 text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">111
-                            Bijoy sarani, Dhaka, DH 1515, Bangladesh.</div>
-                        <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
-                            exclusive@gmail.com</div>
-                        <div class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">
-                            +88015-88888-9999</div>
-                    </div>
-                </div>
-                <div class="flex-col justify-center items-center gap-6 inline-flex text-center">
-                    <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">ACCOUNT</div>
-                    <div class="flex-col justify-center items-center gap-4 flex">
-                        <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">My
-                            Account</a>
-                        <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Login
-                            /
-                            Register</a>
-                        <a href="#"
-                            class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Cart</a>
-                        <a href="#"
-                            class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Wishlist</a>
-                        <a href="#"
-                            class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Shop</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden md:block flex-col justify-start items-start gap-6">
-                <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Quick Link</div>
-                <div class="flex-col justify-start items-start gap-4 flex">
-                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Privacy
-                        Policy</a>
-                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Terms Of
-                        Use</a>
-                    <a href="#" class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">FAQ</a>
-                    <a href="#"
-                        class="text-neutral-50 text-base font-normal font-['Poppins'] leading-normal">Contact</a>
-                </div>
-            </div>
-            <div class="hidden md:block flex-col justify-start items-start gap-6 ">
-                <div class="flex-col justify-start items-start gap-6 flex">
-                    <div class="text-neutral-50 text-xl font-medium font-['Poppins'] leading-7">Download App
-                    </div>
-                    <div class="flex-col justify-start items-start gap-2 flex">
-                        <div class="opacity-70 text-neutral-50 text-xs font-medium font-['Poppins'] leading-none">
-                            Save $3 with App New User Only</div>
-                        <div class="justify-start items-center gap-2 inline-flex">
-                            <div class="w-20 h-20 relative bg-black">
-                                <img class="w-20 h-20 left-[2px] top-[2px] absolute border-2 border-white"
-                                    src="../assets/Qrcode 1.png" />
-                            </div>
-                            <div class="flex-col justify-start items-start gap-1 inline-flex">
-                                <div class="w-28 h-10 relative bg-black">
-                                    <img class="w-24 h-7 left-[3px] top-[5px] absolute rounded border border-neutral-50"
-                                        src="../assets/GooglePlay.png" />
-                                </div>
-                                <div class="w-28 h-10 relative bg-black">
-                                    <img class="w-24 h-8 left-[3px] top-[3px] absolute rounded border border-white"
-                                        src="../assets/appstore.png" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="compra">
+            <h2></h2>
         </div>
-        <div
-            class="hidden md:block left-0 top-[376px] a opacity-40 flex-col justify-center items-center gap-4 lg:flex pt-5">
-            <div class="w-96 h-px relative opacity-50">
-                <div class="w-96 h-px left-0 top-0  opacity-40 border border-white"></div>
+
+    </div>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="firstList">
+                <ul>
+                    <a href="/index.html"><img src="/assets/logoFooter.png" alt="logo" class="logoFooter"></a>
+                    <li><a href="#">Subscribe</a></li>
+                    <li>Get 10% off your first order</li>
+                    <li class="input-icon"><input id="emailInput" type="email" name="email"
+                            placeholder="Enter your email">
+                        <i class="far fa-paper-plane" onclick="submitForm()"></i>
+                    </li>
+                </ul>
             </div>
-            <div class="opacity-60 justify-start items-center gap-3 inline-flex">
-                <div class="justify-start items-center gap-1.5 flex">
-                    <div class="w-5 h-5 relative">
-                        <div class="w-4 h-4 left-[1.67px] top-[1.67px] absolute">
-                        </div>
-                    </div>
-                    <div class="text-white text-base font-normal font-['Poppins'] leading-normal">Copyright
-                        Rimel 2022. All right reserved</div>
+            <div class="secondList">
+                <ul>
+                    <li><a href="#"><strong>Support</strong></a></li>
+                    <li>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+                    <li><a href="#" target="_blank">exclusive@gmail.com</a></li>
+                    <li>+88015-88888-9999</li>
+
+                </ul>
+            </div>
+            <div class="threeList">
+                <ul>
+                    <li><a href="#" target="_blank"><strong>Account</strong></li></a>
+                    <li><a href="#" target="_blank">My Account</a></li>
+                    <li><a href="#">Login / Register</a></li>
+                    <li><a href="/pages/cart.html">Cart</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="/index.html">Shop</a></li>
+
+                </ul>
+            </div>
+            <div class="fourList">
+                <ul>
+                    <li><a href="#" target="_blank"><strong>Quick Link</strong></li></a>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="fiveList">
+                <ul>
+                    <li><a href="#"><strong>Download App</strong></li></a>
+                    <li>Save $3 with App New User Only</li>
+                    <li class="fiveList-item"><a href="#" target="_blank"><img src="/assets/Qrcode 1.png"
+                                alt="Qrcode"></a></li>
+                    <li class="fiveList-item--md"><a href="#" target="_blank"><img src="/assets/GooglePlay.png"
+                                alt="PlayStore"></a></li>
+                    <li class="fiveList-item--md"><a href="#" target="_blank"><img src="/assets/appstore.png"
+                                alt="AppStore"></a></li>
+                </ul>
+                <div class="logos-redes-sociales">
+                    <a href="https://www.facebook.com/home.php" target="_blank"><img src="/assets/facebook-icon.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="/assets/instagram-icon.png" alt="facebook"></a>
+                    <a href="https://twitter.com/home" target="_blank"><img src="/assets/twitter-icon.png" alt="facebook"></a>
                 </div>
             </div>
+        </div>
+        <hr>
+        <div class="containerFooter--md">
+            <p>&copy; Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/swiper.js"></script>
     <script src="./js/script.js"></script>
