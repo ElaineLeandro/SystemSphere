@@ -1,0 +1,404 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Smartphone",
+      "descricao": "Um smartphone de última geração com câmera de alta resolução e processador rápido.",
+      "preco": 999.99,
+      "estoque": 50,
+      "categoria": "Eletrônicos",
+      "marca": "Marca X",
+      "imagem": "caminho/para/smartphone.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Notebook",
+      "descricao": "Um notebook poderoso com grande capacidade de armazenamento e tela de alta definição.",
+      "preco": 1499.99,
+      "estoque": 30,
+      "categoria": "Eletrônicos",
+      "marca": "Marca Y",
+      "imagem": "caminho/para/notebook.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Fones de Ouvido",
+      "descricao": "Fones de ouvido sem fio com cancelamento de ruído.",
+      "preco": 149.99,
+      "estoque": 20,
+      "categoria": "Eletrônicos",
+      "marca": "Marca A",
+      "imagem": "caminho/para/fones.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Teclado Gaming",
+      "descricao": "Teclado mecânico RGB para jogos de alta performance.",
+      "preco": 79.99,
+      "estoque": 15,
+      "categoria": "Eletrônicos",
+      "marca": "Marca B",
+      "imagem": "caminho/para/teclado.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Câmera DSLR",
+      "descricao": "Câmera digital profissional com lente intercambiável.",
+      "preco": 799.99,
+      "estoque": 10,
+      "categoria": "Eletrônicos",
+      "marca": "Marca D",
+      "imagem": "caminho/para/camera.jpg"
+    },
+    {
+      "id": 6,
+      "nome": "Pendrive",
+      "descricao": "Pendrive de alta velocidade com grande capacidade de armazenamento.",
+      "preco": 24.99,
+      "estoque": 80,
+      "categoria": "Eletrônicos",
+      "marca": "Marca G",
+      "imagem": "caminho/para/pendrive.jpg"
+    },
+    {
+      "id": 7,
+      "nome": "Monitor de PC",
+      "descricao": "Monitor de PC de alta resolução para experiência de visualização imersiva.",
+      "preco": 299.99,
+      "estoque": 15,
+      "categoria": "Eletrônicos",
+      "marca": "Marca M",
+      "imagem": "caminho/para/monitor.jpg"
+    },
+    {
+      "id": 8,
+      "nome": "Mouse sem Fio",
+      "descricao": "Mouse óptico sem fio para maior liberdade de movimento.",
+      "preco": 19.99,
+      "estoque": 40,
+      "categoria": "Eletrônicos",
+      "marca": "Marca K",
+      "imagem": "caminho/para/mouse.jpg"
+    },
+    {
+      "id": 9,
+      "nome": "Caixa de Som Bluetooth",
+      "descricao": "Caixa de som portátil Bluetooth com bateria de longa duração.",
+      "preco": 49.99,
+      "estoque": 40,
+      "categoria": "Eletrônicos",
+      "marca": "Marca I",
+      "imagem": "caminho/para/caixa_de_som.jpg"
+    },
+    {
+      "id": 10,
+      "nome": "Cabo HDMI",
+      "descricao": "Cabo HDMI de alta velocidade para conexões de áudio e vídeo de alta definição.",
+      "preco": 12.99,
+      "estoque": 60,
+      "categoria": "Eletrônicos",
+      "marca": "Marca H",
+      "imagem": "caminho/para/cabo_hdmi.jpg"
+    },
+    {
+      "id": 11,
+      "nome": "Smart TV",
+      "descricao": "Smart TV LED 4K com acesso a aplicativos de streaming.",
+      "preco": 1299.99,
+      "estoque": 10,
+      "categoria": "Eletrônicos",
+      "marca": "Marca T",
+      "imagem": "caminho/para/smart_tv.jpg"
+    },
+    {
+      "id": 12,
+      "nome": "Impressora Multifuncional",
+      "descricao": "Impressora multifuncional a jato de tinta com scanner e copiadora.",
+      "preco": 199.99,
+      "estoque": 20,
+      "categoria": "Eletrônicos",
+      "marca": "Marca U",
+      "imagem": "caminho/para/impressora.jpg"
+    },
+    {
+      "id": 13,
+      "nome": "Tablet",
+      "descricao": "Tablet Android com tela de alta resolução e desempenho rápido.",
+      "preco": 299.99,
+      "estoque": 15,
+      "categoria": "Eletrônicos",
+      "marca": "Marca V",
+      "imagem": "caminho/para/tablet.jpg"
+    },
+    {
+      "id": 14,
+      "nome": "Roteador Wi-Fi",
+      "descricao": "Roteador Wi-Fi de alta velocidade para conexões estáveis.",
+      "preco": 79.99,
+      "estoque": 30,
+      "categoria": "Eletrônicos",
+      "marca": "Marca W",
+      "imagem": "caminho/para/roteador.jpg"
+    },
+    {
+      "id": 15,
+      "nome": "Console de Video Game",
+      "descricao": "Console de video game com gráficos de última geração e jogabilidade envolvente.",
+      "preco": 399.99,
+      "estoque": 25,
+      "categoria": "Eletrônicos",
+      "marca": "Marca X",
+      "imagem": "caminho/para/console.jpg"
+    },
+    {
+      "id": 16,
+      "nome": "Drone",
+      "descricao": "Drone com câmera HD para captura de imagens aéreas.",
+      "preco": 299.99,
+      "estoque": 10,
+      "categoria": "Eletrônicos",
+      "marca": "Marca Y",
+      "imagem": "caminho/para/drone.jpg"
+    },
+    {
+      "id": 17,
+      "nome": "Hub USB",
+      "descricao": "Hub USB de alta velocidade com várias portas para conexão de dispositivos.",
+      "preco": 19.99,
+      "estoque": 40,
+      "categoria": "Eletrônicos",
+      "marca": "Marca Z",
+      "imagem": "caminho/para/hub_usb.jpg"
+    },
+    {
+      "id": 18,
+      "nome": "Monitor Gamer",
+      "descricao": "Monitor gamer curvo com taxa de atualização de 144Hz.",
+      "preco": 499.99,
+      "estoque": 15,
+      "categoria": "Eletrônicos",
+      "marca": "Marca A",
+      "imagem": "caminho/para/monitor_gamer.jpg"
+    },
+    {
+      "id": 19,
+      "nome": "Kit de Realidade Virtual",
+      "descricao": "Kit de realidade virtual com óculos e controles para imersão total em jogos.",
+      "preco": 299.99,
+      "estoque": 20,
+      "categoria": "Eletrônicos",
+      "marca": "Marca B",
+      "imagem": "caminho/para/realidade_virtual.jpg"
+    },
+    {
+      "id": 20,
+      "nome": "Webcam",
+      "descricao": "Webcam de alta definição para videochamadas e transmissões ao vivo.",
+      "preco": 49.99,
+      "estoque": 25,
+      "categoria": "Eletrônicos",
+      "marca": "Marca C",
+      "imagem": "caminho/para/webcam.jpg"
+    },
+    {
+      "id": 21,
+      "nome": "Power Bank",
+      "descricao": "Carregador portátil de bateria para dispositivos móveis.",
+      "preco": 29.99,
+      "estoque": 30,
+      "categoria": "Eletrônicos",
+      "marca": "Marca D",
+      "imagem": "caminho/para/power_bank.jpg"
+    },
+    {
+      "id": 22,
+      "nome": "Teclado sem Fio",
+      "descricao": "Teclado sem fio compacto para maior conveniência.",
+      "preco": 34.99,
+      "estoque": 40,
+      "categoria": "Eletrônicos",
+      "marca": "Marca E",
+      "imagem": "caminho/para/teclado_sem_fio.jpg"
+    },
+    {
+      "id": 23,
+      "nome": "Adaptador Bluetooth",
+      "descricao": "Adaptador Bluetooth para dispositivos sem conexão.",
+      "preco": 9.99,
+      "estoque": 50,
+      "categoria": "Eletrônicos",
+      "marca": "Marca F",
+      "imagem": "caminho/para/adaptador_bluetooth.jpg"
+    },
+    {
+      "id": 24,
+      "nome": "Mini Projetor",
+      "descricao": "Mini projetor portátil para apresentações e entretenimento em casa.",
+      "preco": 129.99,
+      "estoque": 20,
+      "categoria": "Eletrônicos",
+      "marca": "Marca G",
+      "imagem": "caminho/para/mini_projetor.jpg"
+    },
+    {
+      "id": 25,
+      "nome": "Fita LED RGB",
+      "descricao": "Fita LED RGB com controle remoto para iluminação personalizada.",
+      "preco": 19.99,
+      "estoque": 35,
+      "categoria": "Eletrônicos",
+      "marca": "Marca H",
+      "imagem": "caminho/para/fita_led.jpg"
+    },
+    {
+      "id": 26,
+      "nome": "Câmera de Segurança",
+      "descricao": "Câmera de segurança IP para monitoramento remoto de ambientes.",
+      "preco": 79.99,
+      "estoque": 25,
+      "categoria": "Eletrônicos",
+      "marca": "Marca I",
+      "imagem": "caminho/para/camera_seguranca.jpg"
+    },
+    {
+      "id": 27,
+      "nome": "Carregador sem Fio",
+      "descricao": "Carregador sem fio para smartphones compatíveis com tecnologia de carregamento sem fio Qi.",
+      "preco": 24.99,
+      "estoque": 30,
+      "categoria": "Eletrônicos",
+      "marca": "Marca J",
+      "imagem": "caminho/para/carregador_sem_fio.jpg"
+    },
+    {
+      "id": 28,
+      "nome": "Placa de Vídeo",
+      "descricao": "Placa de vídeo dedicada para melhor desempenho em jogos e edição de vídeo.",
+      "preco": 299.99,
+      "estoque": 15,
+      "categoria": "Eletrônicos",
+      "marca": "Marca K",
+      "imagem": "caminho/para/placa_video.jpg"
+    },
+    {
+      "id": 29,
+      "nome": "Hub Ethernet",
+      "descricao": "Hub Ethernet para conexões de rede com fio em dispositivos sem porta Ethernet.",
+      "preco": 29.99,
+      "estoque": 20,
+      "categoria": "Eletrônicos",
+      "marca": "Marca L",
+      "imagem": "caminho/para/hub_ethernet.jpg"
+    },
+    {
+      "id": 30,
+      "nome": "Cabo USB-C",
+      "descricao": "Cabo USB-C para transferência de dados e carregamento rápido.",
+      "preco": 14.99,
+      "estoque": 25,
+      "categoria": "Eletrônicos",
+      "marca": "Marca M",
+      "imagem": "caminho/para/cabo_usb_c.jpg"
+    },
+    {
+      "id": 31,
+      "nome": "Microfone USB",
+      "descricao": "Microfone USB de alta qualidade para gravação de áudio em computadores.",
+      "preco": 49.99,
+      "estoque": 30,
+      "categoria": "Eletrônicos",
+      "marca": "Marca N",
+      "imagem": "caminho/para/microfone_usb.jpg"
+    },
+    {
+      "id": 32,
+      "nome": "Adaptador HDMI para VGA",
+      "descricao": "Adaptador HDMI para VGA para conectar dispositivos HDMI a monitores VGA.",
+      "preco": 9.99,
+      "estoque": 35,
+      "categoria": "Eletrônicos",
+      "marca": "Marca O",
+      "imagem": "caminho/para/adaptador_hdmi_vga.jpg"
+    },
+    {
+      "id": 33,
+      "nome": "Cadeira Gamer",
+      "descricao": "Cadeira confortável com design gamer para longas sessões de jogos.",
+      "preco": 299.99,
+      "estoque": 20,
+      "categoria": "Eletrônicos",
+      "marca": "Marca P",
+      "imagem": "caminho/para/cadeira_gamer.jpg"
+    },
+    {
+      "id": 34,
+      "nome": "Teclado Mecânico",
+      "descricao": "Teclado mecânico com switches Cherry MX para uma experiência de digitação premium.",
+      "preco": 99.99,
+      "estoque": 25,
+      "categoria": "Eletrônicos",
+      "marca": "Marca Q",
+      "imagem": "caminho/para/teclado_mecanico.jpg"
+    },
+    {
+      "id": 35,
+      "nome": "Câmera de Ação",
+      "descricao": "Câmera de ação resistente à água para capturar momentos radicais.",
+      "preco": 149.99,
+      "estoque": 15,
+      "categoria": "Eletrônicos",
+      "marca": "Marca R",
+      "imagem": "caminho/para/camera_acao.jpg"
+    },
+    {
+      "id": 36,
+      "nome": "Monitor Curvo",
+      "descricao": "Monitor curvo de alta resolução para uma experiência imersiva.",
+      "preco": 399.99,
+      "estoque": 20,
+      "categoria": "Eletrônicos",
+      "marca": "Marca S",
+      "imagem": "caminho/para/monitor_curvo.jpg"
+    },
+    {
+      "id": 37,
+      "nome": "Mouse Gamer",
+      "descricao": "Mouse gamer com sensor de alta precisão e iluminação RGB.",
+      "preco": 49.99,
+      "estoque": 30,
+      "categoria": "Eletrônicos",
+      "marca": "Marca T",
+      "imagem": "caminho/para/mouse_gamer.jpg"
+    },
+    {
+      "id": 38,
+      "nome": "Kit de Limpeza para Computador",
+      "descricao": "Kit de limpeza completo para manter o computador limpo e funcionando corretamente.",
+      "preco": 19.99,
+      "estoque": 40,
+      "categoria": "Eletrônicos",
+      "marca": "Marca U",
+      "imagem": "caminho/para/kit_limpeza.jpg"
+    },
+    {
+      "id": 39,
+      "nome": "Cartão de Memória",
+      "descricao": "Cartão de memória de alta capacidade para armazenamento extra em câmeras e dispositivos móveis.",
+      "preco": 29.99,
+      "estoque": 50,
+      "categoria": "Eletrônicos",
+      "marca": "Marca V",
+      "imagem": "caminho/para/cartao_memoria.jpg"
+    },
+    {
+      "id": 40,
+      "nome": "Ventoinha para Gabinete",
+      "descricao": "Ventoinha silenciosa para gabinete de computador para manter o sistema refrigerado.",
+      "preco": 14.99,
+      "estoque": 25,
+      "categoria": "Eletrônicos",
+      "marca": "Marca W",
+      "imagem": "caminho/para/ventoinha_gabinete.jpg"
+    }
+  ]
+}

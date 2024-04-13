@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../output.css">
     <!--  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
@@ -14,19 +14,21 @@
 
     <!--ICONES-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
 
-    
+
+
     <title>Wishlist</title>
 </head>
 
 <body>
     <header class="bg-black shadow fixed top-0 md:relative z-50 mb-20  md:mb-0  w-full md:w-auto">
         <div class="title-container hidden">
-            <a href="#"><h2>
-                Aproveite agora **50% de desconto** em produtos selecionados!
-                Não perca essa chance única de economizar! 💰
-            </h2></a>
+            <a href="#">
+                <h2>
+                    Aproveite agora **50% de desconto** em produtos selecionados!
+                    Não perca essa chance única de economizar! 💰
+                </h2>
+            </a>
         </div>
 
         <div class=" w-full mx-auto py-6 px-4 sm:px-6 ">
@@ -38,8 +40,7 @@
                                 d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
-                    <nav id="menu"
-                        class="hidden flex-row w-[420px] h-[50px] justify-center items-center mt-2 px-4 ">
+                    <nav id="menu" class="hidden flex-row w-[420px] h-[50px] justify-center items-center mt-2 px-4 ">
                         <a href="#"
                             class=" text-black text-center bg-white hover:text-gray-900 w-full h-[50px] border border-black rounded-md">Sua
                             Conta
@@ -91,56 +92,64 @@
         <div id="wishlist" class="flex-wish">Wishlist(5)</div>
         <div class="flex-wish"><button class="btn-button" onclick="moveToCart()">Move all To Bag</button></div>
     </section>
-        <section class="wishlist1">
-            <div class="img_flex">
-                <div class="card">
-                    <button class="delete-btn" onclick="deleteItem()">X</button>
-                    <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
-                    <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i class="fas fa-shopping-cart"></i></button>
-                </div>
-                <div class="card">
-                    <button class="delete-btn" onclick="deleteItem()">X</button>
-                    <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
-                    <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i class="fas fa-shopping-cart"></i></button>
-                </div>
-                <div class="card">
-                    <button class="delete-btn" onclick="deleteItem()">X</button>
-                    <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
-                    <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i class="fas fa-shopping-cart"></i></button>
-                </div>
-                <div class="card">
-                    <button class="delete-btn" onclick="deleteItem()">X</button>
-                    <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
-                    <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i class="fas fa-shopping-cart"></i></button>
-                </div>
-                
-        </section>
+    <section class="wishlist1">
+        <div class="img_flex">
+            <div class="card">
+                <button class="delete-btn" onclick="deleteItem()">X</button>
+                <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
+                <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div class="card">
+                <button class="delete-btn" onclick="deleteItem()">X</button>
+                <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
+                <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div class="card">
+                <button class="delete-btn" onclick="deleteItem()">X</button>
+                <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
+                <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div class="card">
+                <button class="delete-btn" onclick="deleteItem()">X</button>
+                <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
+                <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
 
-        <section class="wishlist2">
-            <h3 class="h3">Just For You</h3>
-            <div class="img_flex">
-                <div class="card">
-                    <button class="delete-btn" onclick="deleteItem()">X</button>
-                    <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
-                    <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i class="fas fa-shopping-cart"></i></button>
-                </div>
-                <div class="card">
-                    <button class="delete-btn" onclick="deleteItem()">X</button>
-                    <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
-                    <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i class="fas fa-shopping-cart"></i></button>
-                </div>
-                <div class="card">
-                    <button class="delete-btn" onclick="deleteItem()">X</button>
-                    <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
-                    <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i class="fas fa-shopping-cart"></i></button>
-                </div>
-                <div class="card">
-                    <button class="delete-btn" onclick="deleteItem()">X</button>
-                    <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
-                    <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i class="fas fa-shopping-cart"></i></button>
-                </div>
+    </section>
+
+    <section class="wishlist2">
+        <h3 class="h3">Just For You</h3>
+        <div class="img_flex">
+            <div class="card">
+                <button class="delete-btn" onclick="deleteItem()">X</button>
+                <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
+                <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div class="card">
+                <button class="delete-btn" onclick="deleteItem()">X</button>
+                <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
+                <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div class="card">
+                <button class="delete-btn" onclick="deleteItem()">X</button>
+                <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
+                <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div class="card">
+                <button class="delete-btn" onclick="deleteItem()">X</button>
+                <img src="https://picsum.photos/200/300" alt="Imagem do Produto">
+                <button class="add-to-cart-btn" onclick="adicionarItem()">Adicionar ao Carrinho <i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
         </div>
-        </section>
+    </section>
 
 
     <footer class="bg-black text-white w-full h-[500px] justify-center items-center pt-6 md:pt-[100px] px-35">
@@ -220,20 +229,20 @@
                                 <img class="w-20 h-20 left-[2px] top-[2px] absolute border-2 border-white"
                                     src="./assets/Qrcode 1.png" />
                             </div> -->
-                            <div class="flex-col justify-start items-start gap-1 inline-flex">
-                                <div class="w-28 h-10 relative bg-black">
-                                    <img class="w-24 h-7 left-[3px] top-[5px] absolute rounded border border-neutral-50"
-                                        src="./assets/GooglePlay.png" />
-                                </div>
-                                <div class="w-28 h-10 relative bg-black">
-                                    <img class="w-24 h-8 left-[3px] top-[3px] absolute rounded border border-white"
-                                        src="./assets/appstore.png" />
-                                </div>
-                            </div>
+                    <div class="flex-col justify-start items-start gap-1 inline-flex">
+                        <div class="w-28 h-10 relative bg-black">
+                            <img class="w-24 h-7 left-[3px] top-[5px] absolute rounded border border-neutral-50"
+                                src="./assets/GooglePlay.png" />
+                        </div>
+                        <div class="w-28 h-10 relative bg-black">
+                            <img class="w-24 h-8 left-[3px] top-[3px] absolute rounded border border-white"
+                                src="./assets/appstore.png" />
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
 
         </div>
         <div

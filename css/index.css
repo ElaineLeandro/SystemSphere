@@ -30,28 +30,26 @@ footer .footer {
 }
 
 /*menu style*/
-.title-container {
+/* .title-container {
   position: relative;
   overflow: hidden;
   width: auto;
-  
 }
 
 .title-container h2 {
   position: absolute;
   left: -100%;
   animation: slideRight 11s linear infinite;
-
 }
 
 @keyframes slideRight {
   0% {
-      left: -100%;
+    left: -100%;
   }
   100% {
-      left: 100%;
+    left: 100%;
   }
-} 
+} */
 
 /*PÁGINA WISHLIST*/
 
@@ -60,7 +58,6 @@ footer .footer {
   justify-content: space-between;
   margin: 1%;
 }
-
 
 .btn-button {
   padding: 10px 10px;
@@ -75,7 +72,6 @@ footer .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .btn-button:hover {
@@ -90,7 +86,6 @@ footer .footer {
   margin-top: 2%;
 }
 
-
 .card {
   width: 300px;
   border: 1px solid #ccc;
@@ -98,7 +93,6 @@ footer .footer {
   overflow: hidden;
   margin: 20px;
   position: relative;
-
 }
 
 .card img {
@@ -133,7 +127,6 @@ footer .footer {
 .h3 {
   font-size: 25px;
   margin-left: 5%;
-
 }
 
 /*Página cart*/
@@ -187,7 +180,7 @@ footer .footer {
 .button {
   padding: 16px 48px;
   border-radius: 4px;
-  border: 1px rgba(0, 0, 0, 0.50) solid;
+  border: 1px rgba(0, 0, 0, 0.5) solid;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -204,7 +197,7 @@ footer .footer {
 }
 
 .coupon-text {
-  opacity: 0.50;
+  opacity: 0.5;
   color: black;
   font-size: 16px;
   font-family: Poppins;
@@ -215,12 +208,12 @@ footer .footer {
 
 .coupon-button {
   padding: 16px 48px;
-  background: #DB4444;
+  background: #db4444;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
   display: flex;
-  color: #FAFAFA;
+  color: #fafafa;
   font-size: 16px;
   font-family: Poppins;
   font-weight: 500;
@@ -234,12 +227,12 @@ footer .footer {
 
 .checkout-button {
   padding: 16px 48px;
-  background: #DB4444;
+  background: #db4444;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
   display: flex;
-  color: #FAFAFA;
+  color: #fafafa;
   font-size: 16px;
   font-family: Poppins;
   font-weight: 500;
@@ -247,12 +240,7 @@ footer .footer {
   word-wrap: break-word;
 }
 
-
-
-
-
 /*Final página cart*/
-
 
 /*---------PÁGINA HOME----------*/
 @media screen and (min-width: 1024px) {
@@ -302,7 +290,6 @@ footer .footer {
   .svg-container {
     display: flex;
     position: relative;
-
   }
 
   .containers {
