@@ -10,6 +10,38 @@ async function fetchProducts () {
   }
 }
 
+
+async function addToCart (product) {
+  try {
+    const response = await fetch('https://fakestoreapi.com/carts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        userId: 1,
+        date: new Date().toISOString().split('T')[0],
+        products: [product]
+      })
+    });
+    const data = await response.json();
+    console.log(data);
+
+    // Recupere o carrinho do localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Adicione o produto ao carrinho
+    cart.push(product);
+
+    // Armazene o carrinho no localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+  } catch (error) {
+    console.error('Error adding product to cart', error);
+  }
+}
+
+
+
 // Função para exibir produtos na página
 function displayProducts (products) {
   const productContainer = document.getElementById('products-container');
@@ -45,14 +77,17 @@ function displayProducts (products) {
       </div>
     </div>
     <button class="buy-button mt-auto bg-black w-full">Comprar</button>
-    
-    
-    
     `;
+
+    const buyButton = productElement.querySelector('.buy-button');
+    buyButton.addEventListener('click', () => {
+      addToCart(product);
+    });
 
     productContainer.appendChild(productElement);
   });
 }
+
 
 // Chamar a função fetchProducts quando a página carregar
 window.onload = fetchProducts;

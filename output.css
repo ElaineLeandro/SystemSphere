@@ -2076,7 +2076,7 @@ hr {
 
   .product-card {
     position: relative;
-    height: 450px;
+    height: 410px;
     width: 270px;
     overflow: hidden;
   }
@@ -2220,10 +2220,6 @@ hr {
     height: 145px;
   }
 
-  .lg\:h-\[350px\] {
-    height: 350px;
-  }
-
   .lg\:h-\[500px\] {
     height: 500px;
   }
@@ -2234,10 +2230,6 @@ hr {
 
   .lg\:w-64 {
     width: 16rem;
-  }
-
-  .lg\:w-\[270px\] {
-    width: 270px;
   }
 
   .lg\:w-full {

@@ -604,7 +604,7 @@ hr {
   /* Estilos para os cards de produtos */
   .product-card {
     position: relative;
-    height: 450px;
+    height: 410px;
     width: 270px;
     overflow: hidden;
   }
