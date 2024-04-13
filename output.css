@@ -594,10 +594,6 @@ video {
   left: 0px;
 }
 
-.left-2 {
-  left: 0.5rem;
-}
-
 .left-\[1\.67px\] {
   left: 1.67px;
 }
@@ -730,10 +726,6 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-2\.5 {
-  margin-top: 0.625rem;
 }
 
 .mt-36 {
@@ -916,10 +908,6 @@ video {
   width: 1.25rem;
 }
 
-.w-56 {
-  width: 14rem;
-}
-
 .w-6 {
   width: 1.5rem;
 }
@@ -1053,10 +1041,6 @@ video {
   gap: 0.5rem;
 }
 
-.gap-2\.5 {
-  gap: 0.625rem;
-}
-
 .gap-3 {
   gap: 0.75rem;
 }
@@ -1105,10 +1089,6 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.whitespace-nowrap {
-  white-space: nowrap;
 }
 
 .rounded {
@@ -1236,11 +1216,6 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1249,11 +1224,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 
 .pb-\[11px\] {
@@ -1266,10 +1236,6 @@ video {
 
 .pl-1 {
   padding-left: 0.25rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
 }
 
 .pl-8 {
@@ -1509,20 +1475,39 @@ footer .footer {
   height: 400px;
 }
 
-/*PÁGINA WISHLIST*/
+/*menu style*/
 
-/* .flex {
-  justify-content: space-between;
-  margin: 1%;
-} */
+/* .title-container {
+  position: relative;
+  overflow: hidden;
+  width: auto;
 
-.flex-wish {
-  font-size: 25px;
-  margin-left: 5%;
-  margin-top: 3%;
 }
 
-.buttom {
+.title-container h2 {
+  position: absolute;
+  left: -100%;
+  animation: slideRight 11s linear infinite;
+}
+
+@keyframes slideRight {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/*PÁGINA WISHLIST*/
+
+.flex-wishlist {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+}
+
+.btn-button {
   padding: 10px 10px;
   background-color: white;
   border: 2px solid;
@@ -1536,7 +1521,7 @@ footer .footer {
   align-items: center;
 }
 
-.buttom:hover {
+.btn-button:hover {
   background-color: lightblue;
 }
 
@@ -1591,6 +1576,448 @@ footer .footer {
   margin-left: 5%;
 }
 
+/*final página wishlist*/
+
+/*Página cart*/
+
+.container {
+  width: 1170px;
+  height: 840px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header-cart {
+  width: 1170px;
+  height: 72px;
+  padding: 24px 39px;
+  background: white;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-item {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* Estilizando o contêiner da sacola vazia */
+
+.EmptyBasket-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+/* Estilizando o título */
+
+.EmptyBasket-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+/* Estilizando o texto dentro da sacola vazia */
+
+.EmptyBasket-text {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilizando o link dentro do texto */
+
+.EmptyBasket-text a {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.EmptyBasket-text a:hover {
+  color: #f44336;
+}
+
+.custom-icon-color {
+  color: rgb(41, 43, 54);
+}
+
+.buttons {
+  display: flex;
+  gap: 757px;
+}
+
+.button {
+  padding: 16px 48px;
+  border-radius: 4px;
+  border: 1px rgba(0, 0, 0, 0.5) solid;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.checkout-container {
+  display: flex;
+  width: 1170px;
+  height: 324px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px;
+  -moz-column-gap: 250px;
+       column-gap: 250px;
+  margin-top: 40%;
+}
+
+.coupon-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.discount-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 10px;
+  height: 55px;
+}
+
+.apply-coupon-button {
+  padding: 16px;
+  background: #db4444;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fafafa;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+  cursor: pointer;
+  height: 55px;
+  width: 200px;
+}
+
+.cart-container {
+  width: 470px;
+  height: 324px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1.5px black solid;
+}
+
+.cart-header {
+  left: 24px;
+  top: 32px;
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+
+.subtotal,
+.shipping,
+.total {
+  left: 24px;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.subtotal {
+  top: 84px;
+}
+
+.shipping {
+  top: 140px;
+}
+
+.total {
+  top: 196px;
+}
+
+.checkout-button {
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  left: 40%;
+  top: 236px;
+  position: absolute;
+  background: #db4444;
+  border-radius: 4px;
+  color: #fafafa;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.divider {
+  width: 422px;
+  height: 0px;
+  border: 1px black solid;
+}
+
+/*Final página cart*/
+
+/*menu teste*/
+
+/* Estilos gerais */
+
+header {
+  /* display: flex; */
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding-top: 4%; */
+  background-color: #f8f9fa;
+  /* Cor de fundo do cabeçalho */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+}
+
+.black-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  /* Altura da faixa preta */
+  background-color: black;
+  /* Cor da faixa preta */
+}
+
+.black-bar h2 {
+  margin: 0;
+  font-size: 18px;
+  white-space: nowrap;
+  /* Evita quebrar o texto em várias linhas */
+  overflow: hidden;
+  /* Esconde o texto que ultrapassar a largura da div */
+  animation: slideText 15s linear infinite;
+  /* Aplica a animação de deslizamento */
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(-100%);
+    /* Inicia o texto fora da tela à direita */
+  }
+
+  100% {
+    transform: translateX(
+      100%
+    );
+    /* Desloca o texto para fora da tela à esquerda */
+  }
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  margin: 2%;
+}
+
+.list-menu {
+  display: flex;
+  gap: 15%;
+  align-items: center;
+  font-size: 22px;
+}
+
+/* Estilos da barra de pesquisa e ícones */
+
+.search-favorites-cart-profile {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cart-counter {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Estilos dos ícones */
+
+.search-favorites-cart-profile img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/*final menu teste*/
+
+/*FOOTER TESTE*/
+
+.containerFooter {
+  display: flex;
+  gap: 7%;
+  background-color: black;
+  width: auto;
+  height: 440px;
+  font-family: "Robot", sans-serif;
+  padding: 5%;
+}
+
+.containerFooter--md {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  padding-bottom: 1%;
+  font-size: 16px;
+  font-family: "Robot", sans-serif;
+  color: rgba(255, 255, 255, 1);
+}
+
+hr {
+  border-color: #333;
+}
+
+.containerFooter li {
+  padding: 2%;
+}
+
+.logoFooter {
+  position: relative;
+  width: 118px;
+  height: 40px;
+  margin-left: -2%;
+}
+
+.firstList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+  width: auto;
+}
+
+.firstList li input {
+  border: 1px solid white;
+  background-color: black;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: pointer;
+}
+
+.input-icon input {
+  padding-right: 40px;
+}
+
+.secondList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+}
+
+.threeList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+}
+
+.fourList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+  width: auto;
+}
+
+.fiveList {
+  display: flex;
+  color: white;
+  list-style-type: none;
+  width: auto;
+}
+
+.fiveList img {
+  width: 100px;
+}
+
+.fiveList-item--md img {
+  display: flex;
+  transform: translateX(110%) translateY(-280%);
+}
+
+.fiveList > .logos-redes-sociales {
+  display: flex;
+  height: 40px;
+  width: 200px;
+  align-items: end;
+  justify-content: center;
+  transform: translateY(500%) translateX(-90%);
+  gap: 15%;
+}
+
+.logos-redes-sociales img {
+  width: 40px;
+  height: 35px;
+}
+
+/*FOOTER TESTE*/
+
 /*---------PÁGINA HOME----------*/
 
 @media screen and (min-width: 1024px) {
@@ -1635,6 +2062,51 @@ footer .footer {
 
   .products {
     margin-top: 75px;
+  }
+
+  /* Estilos para o container de produtos */
+
+  #products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+  }
+
+  /* Estilos para os cards de produtos */
+
+  .product-card {
+    position: relative;
+    height: 450px;
+    width: 270px;
+    overflow: hidden;
+  }
+
+  .img {
+    max-height: 200px;
+    width: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  /* Estilos para as imagens dos produtos */
+
+  .product-card .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .buy-button {
+    display: none;
+    padding: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+  }
+
+  /* Exibir o botão de comprar quando o mouse passa sobre o card do produto */
+
+  .product-card:hover .buy-button {
+    display: block;
   }
 
   .svg-container {

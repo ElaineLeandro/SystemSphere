@@ -170,7 +170,7 @@ footer .footer {
   word-wrap: break-word;
 }
 
-    /* Estilizando o contêiner da sacola vazia */
+/* Estilizando o contêiner da sacola vazia */
 .EmptyBasket-box {
   display: flex;
   flex-direction: column;
@@ -179,7 +179,7 @@ footer .footer {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   margin-left: 5%;
   margin-top: 5%;
 }
@@ -188,7 +188,7 @@ footer .footer {
 .EmptyBasket-title {
   font-size: 24px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.50);
+  color: rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
 }
 
@@ -201,7 +201,7 @@ footer .footer {
 
 /* Estilizando o link dentro do texto */
 .EmptyBasket-text a {
-  color: rgba(0, 0, 0, 0.50);;
+  color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
   font-weight: bold;
 }
@@ -246,7 +246,6 @@ footer .footer {
   gap: 16px;
 }
 
-
 .discount-input {
   padding: 10px;
   border: 1px solid #ccc;
@@ -258,13 +257,13 @@ footer .footer {
 
 .apply-coupon-button {
   padding: 16px;
-  background: #DB4444;
+  background: #db4444;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  color: #FAFAFA;
+  color: #fafafa;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -280,7 +279,7 @@ footer .footer {
   position: relative;
   border-radius: 4px;
   overflow: hidden;
-  border: 1.50px black solid;
+  border: 1.5px black solid;
 }
 
 .cart-header {
@@ -325,9 +324,9 @@ footer .footer {
   left: 40%;
   top: 236px;
   position: absolute;
-  background: #DB4444;
+  background: #db4444;
   border-radius: 4px;
-  color: #FAFAFA;
+  color: #fafafa;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -346,14 +345,13 @@ footer .footer {
 /* Estilos gerais */
 
 header {
-  display: flex;
+  /* display: flex; */
   position: relative;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 4%;
+  /* padding-top: 4%; */
   background-color: #f8f9fa; /* Cor de fundo do cabeçalho */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-
 }
 
 .black-bar {
@@ -375,15 +373,17 @@ header {
 
 @keyframes slideText {
   0% {
-      transform: translateX(-100%); /* Inicia o texto fora da tela à direita */
+    transform: translateX(-100%); /* Inicia o texto fora da tela à direita */
   }
   100% {
-      transform: translateX(100%); /* Desloca o texto para fora da tela à esquerda */
+    transform: translateX(
+      100%
+    ); /* Desloca o texto para fora da tela à esquerda */
   }
 }
 
 .logo img {
-  max-height: 50px; 
+  max-height: 50px;
 }
 
 .nav-menu {
@@ -437,7 +437,7 @@ header {
   background-color: black;
   width: auto;
   height: 440px;
-  font-family: 'Robot', sans-serif;
+  font-family: "Robot", sans-serif;
   padding: 5%;
 }
 
@@ -448,8 +448,8 @@ header {
   justify-content: center;
   padding-bottom: 1%;
   font-size: 16px;
-  font-family: 'Robot', sans-serif;
-  color: rgba(255, 255, 255, 1)  ;
+  font-family: "Robot", sans-serif;
+  color: rgba(255, 255, 255, 1);
 }
 
 hr {
@@ -457,7 +457,7 @@ hr {
 }
 
 .containerFooter li {
-padding: 2%;
+  padding: 2%;
 }
 
 .logoFooter {
@@ -490,8 +490,8 @@ padding: 2%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px; 
-  cursor: pointer; 
+  right: 10px;
+  cursor: pointer;
 }
 
 .input-icon input {
@@ -530,8 +530,7 @@ padding: 2%;
 
 .fiveList-item--md img {
   display: flex;
-  transform: translateX(110%) translateY(-280%); 
-  
+  transform: translateX(110%) translateY(-280%);
 }
 
 .fiveList > .logos-redes-sociales {
@@ -549,7 +548,6 @@ padding: 2%;
   height: 35px;
 }
 /*FOOTER TESTE*/
-
 
 /*---------PÁGINA HOME----------*/
 @media screen and (min-width: 1024px) {
@@ -594,6 +592,45 @@ padding: 2%;
 
   .products {
     margin-top: 75px;
+  }
+
+  /* Estilos para o container de produtos */
+  #products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+  }
+
+  /* Estilos para os cards de produtos */
+  .product-card {
+    position: relative;
+    height: 450px;
+    width: 270px;
+    overflow: hidden;
+  }
+  .img {
+    max-height: 200px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Estilos para as imagens dos produtos */
+  .product-card .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .buy-button {
+    display: none;
+    padding: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+  }
+
+  /* Exibir o botão de comprar quando o mouse passa sobre o card do produto */
+  .product-card:hover .buy-button {
+    display: block;
   }
 
   .svg-container {
