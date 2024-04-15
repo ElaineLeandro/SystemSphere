@@ -7,16 +7,9 @@
     background-color: #f2f2f2;
 }
 
-.titulo-form {
-    text-align: center;
-    color: #333;
-    font-weight: bold;
-    font-size: 20px;
-}
-
 form {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 100px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -43,11 +36,12 @@ input[type="checkbox"]+label {
     font-weight: normal;
 }
 
-.container {
+.container-checkout {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 50px;
 }
 
 .compra {
@@ -57,4 +51,72 @@ input[type="checkbox"]+label {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.produtos-compra {
+    width: 425px;
+    height: 140px;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.total-pagar {
+    width: 422px;
+    height: 136px;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cupon-desconto {
+    width: 300px;
+    height: 56px;
+    margin-top: 35px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cupon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.envia-compra {
+    width: 190px;
+    height: 56px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: red;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+h2 {
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        font-size: 20px;
+}
+
+@media (max-width: 850px) {
+    .container-checkout {
+    display: flex;
+    flex-direction: column;
+    }
+  }
