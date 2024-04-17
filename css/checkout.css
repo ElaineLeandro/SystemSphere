@@ -63,7 +63,6 @@ input[type="checkbox"]+label {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .total-pagar {
@@ -73,7 +72,6 @@ input[type="checkbox"]+label {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .cupon-desconto {
@@ -98,12 +96,12 @@ input[type="checkbox"]+label {
     height: 56px;
     margin-top: 20px;
     padding: 20px;
-    background-color: red;
-    color: black;
+    background: #db4444;
+    color: #fafafa;
     padding: 10px 20px;
-    border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
 }
 
