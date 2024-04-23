@@ -62,8 +62,8 @@
                         <!-- Navegação -->
                         <nav class="hidden nav-container">
                             <a href="">Home</a>
-                            <a href="">About</a>
-                            <a href="">Contact</a>
+                            <a href="">Sobre</a>
+                            <a href="">Contatos</a>
                             <a href="">Sign-Up</a>
                         </nav>
                     </div>
@@ -88,7 +88,7 @@
                         </button>
                         <button>
                             <a href="./pages/cart.html">
-                            <img src="./assets/Carrinho.png" alt="Carrinho">
+                                <img src="./assets/Carrinho.png" alt="Carrinho">
                             </a>
                         </button>
                     </div>
@@ -176,9 +176,9 @@
             <!-- Início do div -->
             <div class=" bg-black swiper mySwiper relative w-full md:mt-13" init="false">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./assets/hero.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./assets/hero.png" alt=""></div>
-                    <div class="swiper-slide"><img src="./assets/hero.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./assets/pc.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./assets/pc1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./assets/pc2.jpg" alt=""></div>
                 </div>
 
                 <div class="swiper-button-next absolute top-1/2 right-0 transform -translate-y-1/2"></div>
@@ -204,23 +204,32 @@
                     <div class="flex space-x-4 ml-24">
                         <div class="flex flex-col items-center">
                             <span>Dias</span>
-                            <span class="text-2xl">00</span>
+                            <span class="text-2xl days">00</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <span>Horas</span>
-                            <span class="text-2xl">00</span>
+                            <span class="text-2xl hours">00</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <span>Minutos</span>
-                            <span class="text-2xl">00</span>
+                            <span class="text-2xl minutes">00</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span>Segundos</span>
+                            <span class="text-2xl seconds">00</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2  lg:flex space-x-0 gap-2 lg:space-x-4 " id="products-container">
+            <div class="grid grid-cols-2  lg:flex gap-2  " id="products-container">
+
+
 
             </div>
+            <button class="load-more-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Carregar mais
+            </button>
         </section>
         <div class="mt-36">
             <div class="w-full h-[2px]  opacity-30 border border-black mt-[24px]"></div>
@@ -246,42 +255,42 @@
                 </div>
                 <div class="grid grid-cols-2 gap-4 lg:flex space-x-0 lg:space-x-4 mt-14 ">
                     <div
-                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center">
+                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center category">
                         <div>
                             <img src="./assets/Category-CellPhone.png" alt="Celular">
                             <p>Celulares</p>
                         </div>
                     </div>
                     <div
-                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center">
+                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center category">
                         <div class="flex flex-col justify-center items-center">
                             <img src="./assets/Category-Computer.png" alt="computador">
                             <p>Computadores</p>
                         </div>
                     </div>
                     <div
-                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center">
+                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center category">
                         <div class="flex flex-col justify-center items-center">
                             <img src="./assets/Category-SmartWatch.png" alt="SmartWatch">
                             <p>SmartWatch</p>
                         </div>
                     </div>
                     <div
-                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center">
+                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center category">
                         <div class="flex flex-col justify-center items-center">
                             <img src="./assets/Category-Camera.png" alt="Camera">
                             <p>Camera</p>
                         </div>
                     </div>
                     <div
-                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center">
+                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center category">
                         <div class="flex flex-col justify-center items-center">
                             <img src="./assets/Category-Headphone.png" alt="HeadPhones">
                             <p>HeadPhones</p>
                         </div>
                     </div>
                     <div
-                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center">
+                        class="p-2 border rounded min-h-[196px] lg:h-[145px] lg:w-64 flex flex-col justify-center items-center category">
                         <div class="flex flex-col justify-center items-center">
                             <img src="./assets/Category-Gamepad.png" alt="Games">
                             <p>Games</p>
@@ -492,6 +501,8 @@
                                 (88)</div>
                         </div>
                     </div>
+
+
                 </div>
                 <div class=" flex flex-col bg-slate-200 ">
                     <div class="p-2">
@@ -748,6 +759,7 @@
     <script src="./js/swiper.js"></script>
     <script src="./js/api.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/contador.js"></script>
     <!-- <script src="./js/script.js"></script> -->
 </body>
 

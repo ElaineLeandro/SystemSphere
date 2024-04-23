@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .products .banner {
@@ -32,8 +32,6 @@ footer {
 footer .footer {
   height: 400px;
 }
-
-
 
 /*---------PÁGINA HOME----------*/
 @media screen and (min-width: 1024px) {
@@ -87,6 +85,20 @@ footer .footer {
     gap: 20px;
   }
 
+  /* CSS */
+  .category {
+    transition: background-color 0.3s ease;
+  }
+
+  .category:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .category:hover img {
+    filter: invert(1);
+  }
+
   /* Estilos para os cards de produtos */
   .product-card {
     position: relative;
@@ -112,11 +124,6 @@ footer .footer {
     background-color: black;
     border: none;
     color: white;
-  }
-
-  /* Exibir o botão de comprar quando o mouse passa sobre o card do produto */
-  .product-card:hover .buy-button {
-    display: block;
   }
 
   .svg-container {
