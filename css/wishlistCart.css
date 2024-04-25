@@ -228,13 +228,13 @@ button[type="submit"] i {
 /*Página cart*/
 /*items página cart*/
 .header-cart {
+    display: flex;
     width: auto;
     height: 65px;
     background: white;
     box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     overflow: hidden;
-    display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 5% 3% 5%;
@@ -268,7 +268,7 @@ button[type="submit"] i {
     display: flex;
     width: auto;
     height: auto;
-    background: lightcoral;
+    background: white;
     box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     overflow: hidden;
@@ -276,42 +276,66 @@ button[type="submit"] i {
     font-size: 16px;
     text-align: center;
     align-items: center;
+    
 }
 
-.tittle-image {
+.title-image {
     display: flex;
     margin-left: 9%;
 }
 
-.tittle-image p {
+.title-image p {
     font-size: 16px;
     width: 180px;
     height: auto;
-    padding: 5%;
+    padding: 3%;
 }
 
 .cart-item-image {
-    width: 70px;
-    height: 80px;
+    display: flex;
+    flex-direction: column; 
+    width: 60px;
+    height: 70px;
 }
 
 .info-details {
     display: flex;
-    margin: 4%;
-    gap: 145%;
+    padding: 10px;
+    margin: 3%;
+    gap: 125%;
 }
 
 .item-quantity {
-    display: flex;
-    height: 20px;
-    /* margin-left: 135%; */
+    width: 70px;
 }
 
+.price,
 .total-price {
-    display: flex;
-    /* margin-left: 160%; */
+    font-weight: bold; /* Deixar o texto em negrito para destacar */
 }
 
+.empty-cart-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+    
+}
+
+.empty-cart-message--md {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    margin: 5%;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    background: white;
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    justify-content: center;
+}
 /*Final página cart*/
 
 

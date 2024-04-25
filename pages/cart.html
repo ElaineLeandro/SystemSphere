@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/wishlistCart.css">
 
-    <!--CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <!--ICONES FONTAWESOME-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+
 
     <title>Cart List</title>
 </head>
@@ -65,16 +66,10 @@
             </div>
         </div>
 
-        <div class="header-cart">
-            <div class="header-item">Product</div>
-            <div class="header-item">Price</div>
-            <div class="header-item">Quantity</div>
-            <div class="header-item">Subtotal</div>
-        </div>
-
         <!--DISPLAY ONDE APARECERAM OS PRODUTOS RESGATADOS DO LOCALSTORAGE-->
         <div id="cart-items-container"></div>
         <!---->
+
     </main>
     <footer>
         <div class="containerFooter">
@@ -130,9 +125,12 @@
                                 alt="AppStore"></a></li>
                 </ul>
                 <div class="logos-redes-sociales">
-                    <a href="https://www.facebook.com/home.php" target="_blank"><img src="/assets/facebook-icon.png" alt="facebook"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img src="/assets/instagram-icon.png" alt="facebook"></a>
-                    <a href="https://twitter.com/home" target="_blank"><img src="/assets/twitter-icon.png" alt="facebook"></a>
+                    <a href="https://www.facebook.com/home.php" target="_blank"><img src="/assets/facebook-icon.png"
+                            alt="facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="/assets/instagram-icon.png"
+                            alt="facebook"></a>
+                    <a href="https://twitter.com/home" target="_blank"><img src="/assets/twitter-icon.png"
+                            alt="facebook"></a>
                 </div>
             </div>
         </div>
@@ -144,7 +142,7 @@
 
 
     <!--códigos js página cart-->
-   <script src="/js/cart.js"></script>
+    <script src="/js/cart.js"></script>
 
 </body>
 
