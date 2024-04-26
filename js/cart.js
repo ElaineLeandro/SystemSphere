@@ -1,4 +1,4 @@
-function displayCartItems() {
+function displayCartItems () {
     const cartItemsContainer = document.getElementById('cart-items-container');
 
     cartItemsContainer.innerHTML = '';
@@ -44,6 +44,11 @@ function displayCartItems() {
         cart.forEach(product => {
             const cartItemElement = document.createElement('div');
             cartItemElement.classList.add('cart-item');
+            let price = Number(product.price);
+            console.log("preco", price);
+            let quantity = Number(product.quantity);
+            console.log("quantidade", quantity);
+            let subtotal = price * quantity;
 
             cartItemElement.innerHTML = `
                 <div class="info-product">
@@ -52,11 +57,11 @@ function displayCartItems() {
                         <p>${product.title}</p>
                     </div>
                     <div class="info-details">
-                        <p class="price">R$${product.price}</p>
+                        <p class="price">R$${price.toFixed(2)}</p>
                         <select id="quantity-${product.id}" class="item-quantity">
                             ${generateQuantityOptions(product.quantity)}
                         </select>
-                        <p id="total-price-${product.id}" class="total-price">R$${(product.price * product.quantity).toFixed(2)}</p>
+                        <p id="total-price-${product.id}" class="total-price">R$${(subtotal).toFixed(2)}</p>
                     </div>
                 </div>
             `;
@@ -68,21 +73,42 @@ function displayCartItems() {
             quantitySelect.addEventListener('change', () => {
                 updateTotalPrice(product.id);
             });
+
+            updateTotalPrice(product.id);
         });
     }
 }
 
+function updateCartItemQuantity (productId, quantity) {
+    // Encontre o produto no carrinho
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = cart.find(item => item.id === productId);
+
+    // Verifique se o produto existe
+    if (!product) {
+        console.error(`Product with ID "${productId}" not found.`);
+        return;
+    }
+
+    // Atualize a quantidade do produto
+    product.quantity = quantity;
+
+    // Atualize a quantidade do produto no armazenamento local
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
 // Função para atualizar o preço total com base na quantidade selecionada
-function updateTotalPrice(productId) {
+function updateTotalPrice (productId) {
     const quantitySelect = document.getElementById(`quantity-${productId}`);
+    console.log("quantitySelect", quantitySelect);
     if (!quantitySelect) {
         console.error(`Element with ID "quantity-${productId}" not found.`);
         return;
     }
 
-    const selectedQuantity = parseInt(quantitySelect.value, 10); 
+    const selectedQuantity = parseInt(quantitySelect.value, 10);
 
-    const product = getProductById(productId); 
+    const product = getProductById(productId);
 
     if (!product) {
         console.error(`Product with ID "${productId}" not found.`);
@@ -106,7 +132,9 @@ function updateTotalPrice(productId) {
     updateCartItemQuantity(productId, selectedQuantity);
 }
 
-function getProductById(productId) {
+
+
+function getProductById (productId) {
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const product = cart.find(item => item.id === productId);
@@ -114,7 +142,7 @@ function getProductById(productId) {
 }
 
 // Função auxiliar para gerar opções de quantidade
-function generateQuantityOptions(selectedQuantity) {
+function generateQuantityOptions (selectedQuantity) {
     const maxQuantity = 10; // Definir a quantidade máxima permitida
     let options = '';
 
