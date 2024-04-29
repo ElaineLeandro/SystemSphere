@@ -122,16 +122,31 @@
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email"><br><br>
     
+            <div class="checkbox-salvar">
+            <label for="salvar_info">Salve essas informações para um check-out mais rápido na próxima vez</label>
             <input type="checkbox" id="salvar_info" name="salvar_info">
-            <label for="salvar_info">Salve essas informações para um check-out mais rápido na próxima vez</label><br><br>
-
+            </div>
     
         </form>
     
         <div class="compra">
             <h2>Detalhes da Compra</h2>
-            <div class="produtos-compra"></div>
-            <div class="total-pagar"></div>
+            <div id="cart-items-container"></div>
+            <div class="total-pagar">
+                <div class="total-itens">
+                    <!-- Esta div será usada para exibir o total dos itens do carrinho -->
+                    <span id="total-a-pagar">0</span>
+                </div>
+                <div class="checkout-cartao">
+                    <!-- Adicione os campos necessários para o checkout com cartão aqui -->
+                    <label for="pagamento-cartao">Pagamento com Cartão</label>
+                    <input type="checkbox" id="pagamento-cartao" name="pagamento-cartao">
+                </div>
+                <div class="checkout-dinheiro">
+                    <label for="pagamento-dinheiro">Pagamento com Dinheiro</label>
+                    <input type="checkbox" id="pagamento-dinheiro" name="pagamento-dinheiro">
+                </div>
+            </div>
             <div class="cupon">
             <input class="cupon-desconto" type="text" placeholder="Cupon de Desconto" name="cupon-desconto">
             <button class="envia-compra">Aplicar</button>
@@ -254,6 +269,7 @@
     <script src="../js/swiper.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/cart.js"></script>
     <!-- <script src="./js/script.js"></script> -->
 </body>
 

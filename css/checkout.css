@@ -32,46 +32,39 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
-input[type="checkbox"]+label {
-    font-weight: normal;
-}
+.checkbox-salvar {
+        position: relative;
+        padding-left: 30px;
+        margin-top: 20px;
+    }
 
+    .checkbox-salvar input[type="checkbox"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+    }
+    
 .container-checkout {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
+    margin-top: 20px;
 }
 
 .compra {
-    width: 527px;
-    height: 600px;
+    margin-top: 20px;
+    width: 500px;
+    height: auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.produtos-compra {
-    width: 425px;
-    height: 140px;
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.total-pagar {
-    width: 422px;
-    height: 136px;
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
 }
 
 .cupon-desconto {
@@ -111,6 +104,64 @@ h2 {
         font-weight: bold;
         font-size: 20px;
 }
+
+.total-pagar {
+    width: 422px;
+    height: 136px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.checkout-cartao,
+    .checkout-dinheiro {
+        position: relative;
+        padding-left: 30px;
+        margin-top: 20px;
+    }
+
+    .checkout-cartao input[type="checkbox"],
+    .checkout-dinheiro input[type="checkbox"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+    }
+
+/* CSS para a lista de itens do carrinho */
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    border-radius: 4px;
+    margin: 5% 4% 5%;
+    font-size: 16px;
+}
+
+.cart-item-image {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.cart-item-description {
+    flex: 1;
+}
+
+.cart-item-quantity {
+    margin-right: 20px;
+}
+
+.cart-item-price {
+    font-weight: bold;
+}
+
+.header-cart {
+    display: none;
+}
+
 
 @media (max-width: 850px) {
     .container-checkout {
