@@ -1,4 +1,4 @@
-function displayCartItems () {
+function displayCartItems() {
     const cartItemsContainer = document.getElementById('cart-items-container');
 
     cartItemsContainer.innerHTML = '';
@@ -68,7 +68,6 @@ function displayCartItems () {
 
             cartItemsContent.appendChild(cartItemElement);
 
-            // Adiciona evento onchange ao seletor de quantidade
             const quantitySelect = document.getElementById(`quantity-${product.id}`);
             quantitySelect.addEventListener('change', () => {
                 updateTotalPrice(product.id);
@@ -77,28 +76,131 @@ function displayCartItems () {
             updateTotalPrice(product.id);
         });
     }
+
+    // div buttons  for product
+    const buttonDiv = document.createElement('div');
+    buttonDiv.className = 'button-container';
+
+    // Botão 1
+    const addButtonReturn = document.createElement('button');
+    addButtonReturn.textContent = 'Return To Shop';
+    addButtonReturn.className = 'btnReturn';
+    addButtonReturn.addEventListener('click', () => {
+        window.location.href = '/index.html';
+    });
+
+    buttonDiv.appendChild(addButtonReturn);
+
+    // Botão 2
+    const addButtonUpdate = document.createElement('button');
+    addButtonUpdate.textContent = 'Update Cart';
+    addButtonUpdate.className = 'btnUpdate';
+    addButtonUpdate.addEventListener('click', () => {
+        window.location.href = 'cart.html';
+    });
+
+    buttonDiv.appendChild(addButtonUpdate);
+
+    cartItemsContainer.appendChild(buttonDiv);
+
+    //Container payment
+    const paymentContainer = document.createElement('div')
+    paymentContainer.className = 'paymentContainer';
+
+    //testing
+    const discountSection = document.createElement('div');
+    discountSection.className = 'discountSection';
+    // Inuput code for discount
+    const inputCode = document.createElement('input');
+    inputCode.placeholder = 'Coupon Code';
+    inputCode.type = 'text';
+    inputCode.className = 'inputCode';
+
+    //Button Code apply discount
+    const applyButton = document.createElement('button');
+    applyButton.textContent = 'Apply Coupon';
+    applyButton.className = 'btnApply';
+    applyButton.addEventListener('click', applyCoupon);
+
+    // Function to apply discounts
+    function applyCoupon() {
+        const couponCode = inputCode.value; // Obtém o valor do campo de código
+        const finalAmount = applyDiscount(couponCode);
+        window.location.href = 'checkout.html?amount=' + finalAmount;
+    }
+
+    discountSection.appendChild(inputCode);
+    discountSection.appendChild(applyButton);
+    paymentContainer.appendChild(discountSection);
+
+    cartItemsContainer.appendChild(paymentContainer);
+
+    // Seccion "Cart Total"
+    const cartFlex = document.createElement('div');
+    cartFlex.className = 'cartFlex';
+
+    const cartTotalTitle = document.createElement('h3');
+    cartTotalTitle.textContent = 'Cart Total';
+    cartFlex.appendChild(cartTotalTitle);
+
+    // Calculate the total
+    let subtotal = 0;
+    cart.forEach(product => {
+        subtotal += product.price * product.quantity;
+    });
+
+    const shippingFee = 10; // Value of shipping
+    const totalAmount = subtotal + shippingFee;
+
+    const subtotalElement = document.createElement('p');
+    subtotalElement.textContent = `Subtotal: R$${subtotal.toFixed(2)}`;
+    cartFlex.appendChild(subtotalElement);
+
+    const hr1 = document.createElement('hr');
+    hr1.className = 'cart-divider';
+    cartFlex.appendChild(hr1);
+
+    const shippingFeeElement = document.createElement('p');
+    shippingFeeElement.textContent = `Shipping Fee: R$${shippingFee.toFixed(2)}`;
+    cartFlex.appendChild(shippingFeeElement);
+
+    const hr2 = document.createElement('hr');
+    hr2.className = 'cart-divider';
+    cartFlex.appendChild(hr2);
+
+    const totalAmountElement = document.createElement('p');
+    totalAmountElement.textContent = `Total: R$${totalAmount.toFixed(2)}`;
+    cartFlex.appendChild(totalAmountElement);
+
+    // Botão para finalizar a compra
+    const checkoutButton = document.createElement('button');
+    checkoutButton.textContent = 'Proceed to Checkout';
+    checkoutButton.className = 'btnCheckout';
+    checkoutButton.addEventListener('click', () => {
+        window.location.href = 'checkout.html';
+    });
+    cartFlex.appendChild(checkoutButton);
+    paymentContainer.appendChild(cartFlex);
+    cartItemsContainer.appendChild(paymentContainer);
+
 }
 
-function updateCartItemQuantity (productId, quantity) {
-    // Encontre o produto no carrinho
+function updateCartItemQuantity(productId, quantity) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const product = cart.find(item => item.id === productId);
 
-    // Verifique se o produto existe
     if (!product) {
         console.error(`Product with ID "${productId}" not found.`);
         return;
     }
 
-    // Atualize a quantidade do produto
     product.quantity = quantity;
 
-    // Atualize a quantidade do produto no armazenamento local
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Função para atualizar o preço total com base na quantidade selecionada
-function updateTotalPrice (productId) {
+
+function updateTotalPrice(productId) {
     const quantitySelect = document.getElementById(`quantity-${productId}`);
     console.log("quantitySelect", quantitySelect);
     if (!quantitySelect) {
@@ -134,7 +236,7 @@ function updateTotalPrice (productId) {
 
 
 
-function getProductById (productId) {
+function getProductById(productId) {
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const product = cart.find(item => item.id === productId);
@@ -142,7 +244,7 @@ function getProductById (productId) {
 }
 
 // Função auxiliar para gerar opções de quantidade
-function generateQuantityOptions (selectedQuantity) {
+function generateQuantityOptions(selectedQuantity) {
     const maxQuantity = 10; // Definir a quantidade máxima permitida
     let options = '';
 
