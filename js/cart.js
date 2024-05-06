@@ -4,13 +4,13 @@ function displayCartItems() {
     cartItemsContainer.innerHTML = '';
 
     //Recuperando produtos do localStorage
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Verificando se o carrinho está vazio
     if (cart.length === 0) {
         // Mensagem de carrinho vazio
         const emptyCartMessage = document.createElement('p');
-        emptyCartMessage.textContent = 'Seu carrinho está vazio. Adicione produtos ao seu carrinho.';
+        emptyCartMessage.textContent = 'Seu carrinho está vazio.\n Adicione produtos ao seu carrinho! (;';
         emptyCartMessage.className = 'empty-cart-message';
         emptyCartMessage.style.whiteSpace = 'pre-line';
 
@@ -37,22 +37,24 @@ function displayCartItems() {
 
         // Produtos exibidos abaixo do header-cart
         const cartItemsContent = document.createElement('div');
-        cartItemsContent.className = 'cart-items-content';
         cartItemsContainer.appendChild(cartItemsContent);
+
 
         // Iterando sobre cada item do carrinho para exibir os detalhes
         cart.forEach(product => {
             const cartItemElement = document.createElement('div');
             cartItemElement.classList.add('cart-item');
             let price = Number(product.price);
-            console.log("preco", price);
             let quantity = Number(product.quantity);
-            console.log("quantidade", quantity);
             let subtotal = price * quantity;
+
 
             cartItemElement.innerHTML = `
                 <div class="info-product">
                     <div class="title-image">
+                    <div>
+                    <button type="button" class="btn-delete" id="btn-delete${product.id}">X</button>
+                    </div>
                         <a href="#" target="_blank"><img src="${product.image}" alt="${product.title}" class="cart-item-image"></a>
                         <p>${product.title}</p>
                     </div>
@@ -68,20 +70,28 @@ function displayCartItems() {
 
             cartItemsContent.appendChild(cartItemElement);
 
+
             const quantitySelect = document.getElementById(`quantity-${product.id}`);
             quantitySelect.addEventListener('change', () => {
                 updateTotalPrice(product.id);
             });
 
             updateTotalPrice(product.id);
+
+            const deleteButton = document.getElementById(`btn-delete${product.id}`);
+            deleteButton.addEventListener('click', () => {
+                deleteCartItem(product.id);
+                displayCartItems(); 
+            });
         });
+
     }
 
     // div buttons  for product
     const buttonDiv = document.createElement('div');
     buttonDiv.className = 'button-container';
 
-    // Botão 1
+    // Button 1
     const addButtonReturn = document.createElement('button');
     addButtonReturn.textContent = 'Return To Shop';
     addButtonReturn.className = 'btnReturn';
@@ -91,7 +101,7 @@ function displayCartItems() {
 
     buttonDiv.appendChild(addButtonReturn);
 
-    // Botão 2
+    // Button 2
     const addButtonUpdate = document.createElement('button');
     addButtonUpdate.textContent = 'Update Cart';
     addButtonUpdate.className = 'btnUpdate';
@@ -110,6 +120,7 @@ function displayCartItems() {
     //testing
     const discountSection = document.createElement('div');
     discountSection.className = 'discountSection';
+
     // Inuput code for discount
     const inputCode = document.createElement('input');
     inputCode.placeholder = 'Coupon Code';
@@ -141,36 +152,65 @@ function displayCartItems() {
 
     const cartTotalTitle = document.createElement('h3');
     cartTotalTitle.textContent = 'Cart Total';
+    cartTotalTitle.className = 'cartTotalTitle';
     cartFlex.appendChild(cartTotalTitle);
 
     // Calculate the total
     let subtotal = 0;
     cart.forEach(product => {
-        subtotal += product.price * product.quantity;
+        subtotal += parseFloat(product.price) * parseInt(product.quantity);
     });
 
-    const shippingFee = 10; // Value of shipping
+    const shippingFee = 0; //valor frete no momento deixaremos em zero
     const totalAmount = subtotal + shippingFee;
 
-    const subtotalElement = document.createElement('p');
-    subtotalElement.textContent = `Subtotal: R$${subtotal.toFixed(2)}`;
+    const subtotalElement = document.createElement('span');
+    subtotalElement.textContent = `Subtotal:`;
+    subtotalElement.className = 'subtotal';
+
     cartFlex.appendChild(subtotalElement);
+
+    const subtotalValue = document.createElement('span');
+    subtotalValue.innerText = `R$${subtotal.toFixed(2)}`;
+    subtotalValue.className = 'subtotalValue';
+
+    cartFlex.appendChild(subtotalValue);
 
     const hr1 = document.createElement('hr');
     hr1.className = 'cart-divider';
+
     cartFlex.appendChild(hr1);
 
-    const shippingFeeElement = document.createElement('p');
-    shippingFeeElement.textContent = `Shipping Fee: R$${shippingFee.toFixed(2)}`;
+    const shippingFeeElement = document.createElement('span');
+    shippingFeeElement.textContent = `Shipping Fee:`;
+    shippingFeeElement.className = 'shippingFee';
+
     cartFlex.appendChild(shippingFeeElement);
+
+    const shippingFeeValue = document.createElement('span');
+    shippingFeeValue.textContent = `R$${shippingFee.toFixed(2)}`;
+    shippingFeeValue.className = 'shippingFeeValue';
+
+    cartFlex.appendChild(shippingFeeValue);
 
     const hr2 = document.createElement('hr');
     hr2.className = 'cart-divider';
+
     cartFlex.appendChild(hr2);
 
-    const totalAmountElement = document.createElement('p');
-    totalAmountElement.textContent = `Total: R$${totalAmount.toFixed(2)}`;
+    const totalAmountElement = document.createElement('span');
+    totalAmountElement.textContent = `Total:`;
+    totalAmountElement.className = 'totalAmount';
+
     cartFlex.appendChild(totalAmountElement);
+
+    const totalAmountValue = document.createElement('span');
+    totalAmountValue.textContent = `R$${totalAmount.toFixed(2)}`;
+    totalAmountValue.className = 'totalAmountValue';
+
+    cartFlex.appendChild(totalAmountValue);
+    
+
 
     // Botão para finalizar a compra
     const checkoutButton = document.createElement('button');
@@ -183,26 +223,39 @@ function displayCartItems() {
     paymentContainer.appendChild(cartFlex);
     cartItemsContainer.appendChild(paymentContainer);
 
+    function cardQuantity() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartQuantityElement = document.getElementById('cart-quantity');
+
+        if (cart.length > 0) {
+            cartQuantityElement.textContent = cart.length;
+        } else {
+            cartQuantityElement.style.display = 'none';
+        }
+    }
+
+    cardQuantity();
+
+
 }
 
 function updateCartItemQuantity(productId, quantity) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const product = cart.find(item => item.id === productId);
 
     if (!product) {
         console.error(`Product with ID "${productId}" not found.`);
         return;
     }
+    
 
-    product.quantity = quantity;
+    product.quantity = parseInt(quantity);
 
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-
 function updateTotalPrice(productId) {
     const quantitySelect = document.getElementById(`quantity-${productId}`);
-    console.log("quantitySelect", quantitySelect);
     if (!quantitySelect) {
         console.error(`Element with ID "quantity-${productId}" not found.`);
         return;
@@ -228,14 +281,17 @@ function updateTotalPrice(productId) {
         return;
     }
 
-    const totalPrice = product.price * selectedQuantity;
+    const totalPrice = parseFloat(product.price) * parseInt(selectedQuantity);
     totalPriceElement.textContent = `R$${totalPrice.toFixed(2)}`;
 
     updateCartItemQuantity(productId, selectedQuantity);
 }
 
-
-
+function deleteCartItem(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(item => item.id !== productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
 function getProductById(productId) {
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
